@@ -455,6 +455,10 @@ static int nz_strcmp(int nzlength, const char *nz, const char *z) {
     return (zlength == nzlength) && (strncmp(nz, z, zlength) == 0) ? 0 : -1;
 }
 
+/*
+ * ADD_STAT是一个回调函数
+ * see @memcached.h
+ */
 bool get_stats(const char *stat_type, int nkey, ADD_STAT add_stats, void *c) {
     bool ret = true;
 
