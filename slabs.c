@@ -29,12 +29,14 @@
 /* powers-of-N allocation structures */
 
 typedef struct {
+    /* 下面4个参数用来管理这个slab中的相关item */
     unsigned int size;      /* sizes of items */
     unsigned int perslab;   /* how many items per slab */
 
     void *slots;           /* list of item ptrs */
     unsigned int sl_curr;   /* total free items in list */
 
+    /* 下面三个参数用来管理slabclass中的 slab，也即page */
     unsigned int slabs;     /* how many slabs were allocated for this class */
 
     void **slab_list;       /* array of slab pointers */
@@ -59,6 +61,9 @@ static size_t mem_avail = 0;
  * Access to the slab allocator is protected by this lock
  */
 static pthread_mutex_t slabs_lock = PTHREAD_MUTEX_INITIALIZER;
+/*
+ * @WENCHUNYANG rebalance是什么概念？
+ */
 static pthread_mutex_t slabs_rebalance_lock = PTHREAD_MUTEX_INITIALIZER;
 
 /*
@@ -68,6 +73,11 @@ static int do_slabs_newslab(const unsigned int id);
 static void *memory_allocate(size_t size);
 static void do_slabs_free(void *ptr, const size_t size, unsigned int id);
 
+/*
+ * @WENCHUNYANG 为了避免这种尴尬，即现在在某个或者某些slab中还存在
+ * 空间，但是却无法利用这些空间来创建新的slab以及其对应的page。
+ * OOM：memcached没有可用的空间；memached没有足够空间来创建新的slab
+ */
 /* Preallocate as many slab pages as possible (called from slabs_init)
    on start-up, so users don't get confused out-of-memory errors when
    they do have free (in-slab) space, but no space to make new slabs.
@@ -89,6 +99,11 @@ unsigned int slabs_clsid(const size_t size) {
 
     if (size == 0 || size > settings.item_size_max)
         return 0;
+    /*
+     * @WENCHUNYANG 既然初始化后，每个slab能存的object大小都可以算出来，
+     * 为什么这里需要利用循环来查找最合适的？
+     * 虽然总共的slab数是一定的。
+     */
     while (size > slabclass[res].size)
         if (res++ == power_largest)     /* won't fit in the biggest slab */
             return power_largest;
@@ -657,6 +672,13 @@ unsigned int slabs_available_chunks(const unsigned int id, bool *mem_flag,
     return ret;
 }
 
+/*
+ * memcached 中的slab rebalance功能是想防止出现下述情况：
+ * 某个slab分配了很多page，这样之后其它slab的可用page就会很少。
+ * 在某些场景下会导致其它slab频繁进行LRU的数据替换，降低cache的
+ * 命中率
+ */
+
 static pthread_cond_t slab_rebalance_cond = PTHREAD_COND_INITIALIZER;
 static volatile int do_run_slab_thread = 1;
 static volatile int do_run_slab_rebalance_thread = 1;
@@ -673,7 +695,11 @@ static int slab_rebalance_start(void) {
     /*
      * @WENCHUNYANG
      * 检查源和目的的id是否是合法的值
+     *
+     * s_clsid表示要从这里移除一个page
+     * d_clsid表示要把之前移除的page分配给该slabclass
      */
+
     if (slab_rebal.s_clsid < POWER_SMALLEST ||
         slab_rebal.s_clsid > power_largest  ||
         slab_rebal.d_clsid < SLAB_GLOBAL_PAGE_POOL ||
