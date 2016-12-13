@@ -1,10 +1,11 @@
 #ifndef CRAWLER_H
 #define CRAWLER_H
 
-/* 
+/* @WENCHUNYANG
  * 这个模块是用来在后台去扫描每个slab类LRU中的过期数据。通常数据会有一些时效的标签，
  * 但是这些标签好像只会在这个对象恰好在LRU的末尾时才会被移除。而这个模块的功能就是
  * 在后台去扫描这些LRU。这样就可以定期去回收这些空间。
+ * do_item_crawl_q
  */
 
 typedef struct {
@@ -27,8 +28,9 @@ struct crawler_expired_data {
     bool crawl_complete;
     bool is_external; /* whether this was an alloc local or remote to the module. */
 };
-/*
+/* @WENCHUNYANG
  * 搞清楚这个alloc local和remote的区别。
+ * local应该是内存是自己管理，那么在finalize会释放；否则就不会管理这篇内存
  */
 
 enum crawler_result_type {

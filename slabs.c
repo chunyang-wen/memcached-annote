@@ -670,6 +670,10 @@ static int slab_rebalance_start(void) {
 
     pthread_mutex_lock(&slabs_lock);
 
+    /*
+     * @WENCHUNYANG
+     * 检查源和目的的id是否是合法的值
+     */
     if (slab_rebal.s_clsid < POWER_SMALLEST ||
         slab_rebal.s_clsid > power_largest  ||
         slab_rebal.d_clsid < SLAB_GLOBAL_PAGE_POOL ||
@@ -679,10 +683,19 @@ static int slab_rebalance_start(void) {
 
     s_cls = &slabclass[slab_rebal.s_clsid];
 
+    /*
+     * @WENCHUNYANG
+     * 目标的slabclass仍然可以增加，就不用rebalance
+     *
+     */
     if (!grow_slab_list(slab_rebal.d_clsid)) {
         no_go = -1;
     }
 
+    /*
+     * @WENCHUNYANG
+     * 源slabclass管理的slab少于2
+     */
     if (s_cls->slabs < 2)
         no_go = -3;
 

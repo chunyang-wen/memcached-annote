@@ -23,6 +23,10 @@
 
 #define LARGEST_ID POWER_LARGEST
 
+/* @WENCHUNYANG
+ * 有种看Nginx源码的感觉
+ */
+
 typedef struct {
     void *c; /* original connection structure. still with source thread attached. */
     int sfd; /* client fd. */
@@ -85,6 +89,9 @@ crawler_module_reg_t *crawler_mod_regs[2] = {
 
 crawler_module_t active_crawler_mod;
 
+/* @WENCHUNYANG
+ * 每个slabclass都有自己的crawler
+ */
 static crawler crawlers[LARGEST_ID];
 
 static int crawler_count = 0;
@@ -178,6 +185,9 @@ static void crawler_expired_eval(crawler_module_t *cm, item *search, uint32_t hv
     int is_flushed = item_is_flushed(search);
     if ((search->exptime != 0 && search->exptime < current_time)
         || is_flushed) {
+        /* @WENCHUNYANG
+         * 该元素超期了或者已经被清除了
+         */
         crawlers[i].reclaimed++;
         s->reclaimed++;
 
@@ -199,7 +209,12 @@ static void crawler_expired_eval(crawler_module_t *cm, item *search, uint32_t hv
         assert(search->slabs_clsid == 0);
     } else {
         s->seen++;
+        /* @WENCHUNYANG
+         * 直接将引用计数减1,减了以后又不会对对应的item造成影响
+         * 有点奇怪，后面应该会针对refcnt做一些处理
+         */
         refcount_decr(&search->refcount);
+        /* exptime == 0，表示该元素不会因为超时被清理 */
         if (search->exptime == 0) {
             s->noexp++;
         } else if (search->exptime - current_time > 3599) {
@@ -308,6 +323,10 @@ static int lru_crawler_client_getbuf(crawler_client_t *c) {
 static void lru_crawler_class_done(int i) {
     crawlers[i].it_flags = 0;
     crawler_count--;
+    /* @WENCHUNYANG
+     * 这也太tricky了把。利用内存空间的布局来实现这种指针的转换
+     * @memcached.h
+     */
     do_item_unlinktail_q((item *)&crawlers[i]);
     do_item_stats_add_crawl(i, crawlers[i].reclaimed,
             crawlers[i].unfetched, crawlers[i].checked);
@@ -507,6 +526,9 @@ static int do_lru_crawler_start(uint32_t id, uint32_t remaining) {
         stats.lru_crawler_starts++;
         STATS_UNLOCK();
     }
+    /* @WENCHUNYANG
+     * 表示HOT_LRU，WARM_LRU，COLD_LRU启动的个数
+     */
     return starts;
 }
 

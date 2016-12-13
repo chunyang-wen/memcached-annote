@@ -40,6 +40,9 @@ typedef struct {
     rel_time_t evicted_time;
 } itemstats_t;
 
+/* @WENCHUNYANG
+ * 每个LRU的头和尾指针？
+ */
 static item *heads[LARGEST_ID];
 static item *tails[LARGEST_ID];
 static itemstats_t itemstats[LARGEST_ID];
@@ -89,6 +92,11 @@ uint64_t get_cas_id(void) {
     return next_id;
 }
 
+/*
+ * @WENCHUNYANG
+ * 表示这个item是否还在内存中？
+ * flushed表示已经不在memcached中了
+ */
 int item_is_flushed(item *it) {
     rel_time_t oldest_live = settings.oldest_live;
     uint64_t cas = ITEM_get_cas(it);
@@ -135,6 +143,10 @@ static unsigned int noexp_lru_size(int slabs_clsid) {
  *
  * Returns the total size of the header.
  */
+/* @WENCHUNYANG
+ * 这种magic number不是很容易就可以避免么？
+ *
+ */
 static size_t item_make_header(const uint8_t nkey, const unsigned int flags, const int nbytes,
                      char *suffix, uint8_t *nsuffix) {
     /* suffix is defined at 40 chars elsewhere.. */
@@ -174,10 +186,16 @@ item *do_item_alloc(char *key, const size_t nkey, const unsigned int flags,
      * bandwidth it takes, the more time we can loop in comparison to serving
      * and replacing small items.
      */
+    /*
+     * @WENCHUNYANG
+     * 在这里尝试10次？
+     */
     for (i = 0; i < 10; i++) {
         uint64_t total_bytes;
         /* Try to reclaim memory first */
         if (!settings.lru_maintainer_thread) {
+            /* @WENCHUNYANG
+             * 如果没有开启lru的维护线程，则直接从COLD_LRU中剔除末尾的item */
             lru_pull_tail(id, COLD_LRU, 0, 0);
         }
         it = slabs_alloc(ntotal, id, &total_bytes, 0);
@@ -247,6 +265,9 @@ item *do_item_alloc(char *key, const size_t nkey, const unsigned int flags,
     if (it->it_flags & ITEM_CHUNKED) {
         item_chunk *chunk = (item_chunk *) ITEM_data(it);
 
+        /* @WENCHUNYANG
+         * h_next是hash chain，冲突的解决方法是链式
+         */
         chunk->next = (item_chunk *) it->h_next;
         chunk->prev = 0;
         chunk->head = it;
@@ -359,6 +380,9 @@ int do_item_link(item *it, const uint32_t hv) {
 
     /* Allocate a new CAS ID on link. */
     ITEM_set_cas(it, (settings.use_cas) ? get_cas_id() : 0);
+    /* @WENCHUNYANG
+     * 将这个item放到hash表中
+     */
     assoc_insert(it, hv);
     item_link_q(it);
     refcount_incr(&it->refcount);
@@ -424,6 +448,10 @@ void do_item_update_nolock(item *it) {
 }
 
 /* Bump the last accessed time, or relink if we're in compat mode */
+/* @WENCHUNYANG
+ * 如果开启后台LRU的维护线程的话，则直接更新它的时间。
+ * 否则将它从q上unlink，然后再次link下。
+ */
 void do_item_update(item *it) {
     MEMCACHED_ITEM_UPDATE(ITEM_key(it), it->nkey, it->nbytes);
     if (it->time < current_time - ITEM_UPDATE_INTERVAL) {
@@ -439,6 +467,11 @@ void do_item_update(item *it) {
     }
 }
 
+/* @WENCHUNYANG
+ * 同样的key给unlink掉
+ * 在unlink时会更新它的引用计数，如果计数为0，则会被删除
+ * 然后再link新的item
+ */
 int do_item_replace(item *it, item *new_it, const uint32_t hv) {
     MEMCACHED_ITEM_REPLACE(ITEM_key(it), it->nkey, it->nbytes,
                            ITEM_key(new_it), new_it->nkey, new_it->nbytes);
@@ -845,6 +878,9 @@ static int lru_pull_tail(const int orig_id, const int cur_lru,
     unsigned int move_to_lru = 0;
     uint64_t limit = 0;
 
+    /* @WENCHUNYANG
+     * cur_lru应该表示HOT_LRU，WARM_LRU和COLD_LRU
+     */
     id |= cur_lru;
     pthread_mutex_lock(&lru_locks[id]);
     search = tails[id];
@@ -1256,6 +1292,14 @@ void do_item_unlinktail_q(item *it) {
 
 /* This is too convoluted, but it's a difficult shuffle. Try to rewrite it
  * more clearly. */
+/* @WENCHUNYANG
+ * 思想是在正常LRU队列放置一个特殊的item，利用这个item来遍历
+ * 所有的其它item
+ * 函数执行成功，返回的是输入item的前一个节点
+ * prev1->prev2->it->next ===> prev1->it->prev2->next，返回prev2
+ * 如果it是head，则直接返回NULL
+ * 如果it是tail，则将其prev元素变成tail，然后将tail这个节点返回
+ */
 item *do_item_crawl_q(item *it) {
     item **head, **tail;
     assert(it->it_flags == 1);
@@ -1288,6 +1332,9 @@ item *do_item_crawl_q(item *it) {
         }
         assert(it->next != it);
         if (it->next) {
+            /* @WENCHUNYANG
+             * 将item节点的prev和next链接在一起
+             */
             assert(it->prev->next == it);
             it->prev->next = it->next;
             it->next->prev = it->prev;
@@ -1296,6 +1343,9 @@ item *do_item_crawl_q(item *it) {
             it->prev->next = 0;
         }
         /* prev->prev's next is it->prev */
+        /* @WENCHUNYANG
+         * 将it这个节点往前移动至其之前prev的prev位置
+         */
         it->next = it->prev;
         it->prev = it->next->prev;
         it->next->prev = it;
