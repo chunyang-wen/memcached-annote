@@ -48,6 +48,9 @@ pthread_mutex_t atomics_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 /* Lock for global stats */
 static pthread_mutex_t stats_lock = PTHREAD_MUTEX_INITIALIZER;
+/* 每个线程还有自己的stat lock。这个stats_lock是改变全局状态的统计锁。
+ * STATS_LOCK函数的调用地方即是修改全局状态的地方
+ */
 
 /* Lock to cause worker threads to hang up after being woken */
 static pthread_mutex_t worker_hang_lock;
@@ -149,6 +152,7 @@ static void register_thread_initialized(void) {
     pthread_cond_signal(&init_cond);
     pthread_mutex_unlock(&init_lock);
     /* Force worker threads to pile up if someone wants us to */
+	/* 使用这种竞争锁，然后再释放锁的方式来强制线程串行*/
     pthread_mutex_lock(&worker_hang_lock);
     pthread_mutex_unlock(&worker_hang_lock);
 }
@@ -194,9 +198,20 @@ void pause_threads(enum pause_thread_types type) {
             /* TODO: This is a fatal problem. Can it ever happen temporarily? */
         }
     }
+	/* 在这个函数里面会使用pthread_cond_wait函数。
+	 * 这个函数需要联合一个cond和一个mutex变量。首先进程*必须先拿到锁*，在进程等待条件时
+	 * 会释放这个锁。当有人signal该cond变量时，会尝试重新获取锁
+	 */
     wait_for_thread_registration(settings.num_threads);
     pthread_mutex_unlock(&init_lock);
 }
+
+/* 下面三个函数cq_init, cq_pop, cq_push都需要先持有对应cq的锁。
+ * cqi_new函数则需要持有cqi_freelist_lock
+ * cqi_free同样
+ * 这里注意到cqi_freelist_lock的维护方式和cache_t，以及Python中的freelist组织
+ * 方式特别的接近。使用next指针来将各个地方的free block串联起来。
+ */
 
 /*
  * Initializes a connection queue.
@@ -311,6 +326,7 @@ static void create_worker(void *(*func)(void *), void *arg) {
     }
 }
 
+/* 每个新来到的连接需要持有conn_lock锁 */
 /*
  * Sets whether or not we accept new connections.
  */
@@ -353,6 +369,7 @@ static void setup_thread(LIBEVENT_THREAD *me) {
         exit(EXIT_FAILURE);
     }
 
+	/* 每个线程都有cache */
     me->suffix_cache = cache_create("suffix", SUFFIX_SIZE, sizeof(char*),
                                     NULL, NULL);
     if (me->suffix_cache == NULL) {
@@ -514,6 +531,7 @@ void redispatch_conn(conn *c) {
 }
 
 /* This misses the allow_new_conns flag :( */
+/* sidethread是一种什么样的存在 */
 void sidethread_conn_close(conn *c) {
     c->state = conn_closed;
     if (settings.verbose > 1)
@@ -528,6 +546,10 @@ void sidethread_conn_close(conn *c) {
 }
 
 /********************************* ITEM ACCESS *******************************/
+
+/* 操作item时首先需要持有该item的锁。在将该item会lru关联起来时，会额外持有lru对应的锁
+ * item锁的个数和hash桶的个数是一样的（难道对锁的个数没有限制？）
+ */
 
 /*
  * Allocates a new item.
@@ -773,6 +795,10 @@ void memcached_thread_init(int nthreads) {
 
     for (i = 0; i < nthreads; i++) {
         int fds[2];
+		/* pipe 只能用于用血缘关系的进程之间的通信
+		 * 要想在没有血缘关系之间的进程通信使用命名管道
+		 * mkfifo
+		 */
         if (pipe(fds)) {
             perror("Can't create notify pipe");
             exit(1);

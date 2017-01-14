@@ -11,12 +11,15 @@
 /*
  * @WENCHUNYANG 这个slab_sizes是传入用来指定每个slab的大小。
  * 如果这个指针为空的话，则slab之间按照factor的进行增长
+ * prealloc表明是否需要事先分配所有需要的内存空间。
  */
 void slabs_init(const size_t limit, const double factor, const bool prealloc, const uint32_t *slab_sizes);
 
 
 /**
  * Given object size, return id to use when allocating/freeing memory for object
+ * 这个返回值的设计非常糟糕。在传统的设计中，0表示没有出错。虽然这里的返回值表示clsid，
+ * 但是仍然觉得这个0是比较奇怪的值。
  * 0 means error: can't store such a large object
  */
 

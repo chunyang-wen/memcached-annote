@@ -72,6 +72,7 @@ static PREFIX_STATS *stats_prefix_find(const char *key, const size_t nkey) {
 
     assert(key != NULL);
 
+	/* 利用key里面某个字符来标记是否是stats？*/
     for (length = 0; length < nkey && key[length] != '\0'; length++) {
         if (key[length] == settings.prefix_delimiter) {
             bailout = false;

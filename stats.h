@@ -1,3 +1,6 @@
+/* 类似于一个简单的map。只不过这个map只有PREFIX_HASH_SIZE个桶
+ * 冲突的解决方法是使用链表的方法来解决。
+ */
 /* stats */
 void stats_prefix_init(void);
 void stats_prefix_clear(void);

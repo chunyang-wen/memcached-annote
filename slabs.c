@@ -45,6 +45,11 @@ typedef struct {
     size_t requested; /* The number of requested bytes */
 } slabclass_t;
 
+/* 目前最多只支持64个slab class
+ * 用户的数据(item)都是存放在对应的slab cls中。但是其指针也存在于
+ * 一个对应的lru中。lru后台会有一个线程来维护，根据某些条件触发来
+ * 替换掉一些值。
+ */
 static slabclass_t slabclass[MAX_NUMBER_OF_SLAB_CLASSES];
 static size_t mem_limit = 0;
 static size_t mem_malloced = 0;
@@ -53,6 +58,7 @@ static size_t mem_malloced = 0;
 static bool mem_limit_reached = false;
 static int power_largest;
 
+/* 管理用户允许memcached使用的内存 */
 static void *mem_base = NULL;
 static void *mem_current = NULL;
 static size_t mem_avail = 0;
@@ -63,6 +69,7 @@ static size_t mem_avail = 0;
 static pthread_mutex_t slabs_lock = PTHREAD_MUTEX_INITIALIZER;
 /*
  * @WENCHUNYANG rebalance是什么概念？
+ * 下面描述的尴尬情况
  */
 static pthread_mutex_t slabs_rebalance_lock = PTHREAD_MUTEX_INITIALIZER;
 
@@ -136,10 +143,12 @@ void slabs_init(const size_t limit, const double factor, const bool prealloc, co
 
     while (++i < MAX_NUMBER_OF_SLAB_CLASSES-1) {
         if (slab_sizes != NULL) {
+			/* 某个slab的值为0，不分配内存 */
             if (slab_sizes[i-1] == 0)
                 break;
             size = slab_sizes[i-1];
         } else if (size >= settings.slab_chunk_size_max / factor) {
+			/* 大小超过page内允许的最大chunk大小 */
             break;
         }
         /* Make sure items are always n-byte aligned */
@@ -156,6 +165,7 @@ void slabs_init(const size_t limit, const double factor, const bool prealloc, co
         }
     }
 
+	/* 目前最大的slabclass号 */
     power_largest = i;
     slabclass[power_largest].size = settings.slab_chunk_size_max;
     slabclass[power_largest].perslab = settings.slab_page_size / settings.slab_chunk_size_max;
@@ -174,6 +184,7 @@ void slabs_init(const size_t limit, const double factor, const bool prealloc, co
     }
 
     if (prealloc) {
+		/* 初始时在每个size class上分配一个1MB的slab */
         slabs_preallocate(power_largest);
     }
 }
@@ -204,6 +215,7 @@ static void slabs_preallocate (const unsigned int maxslabs) {
 static int grow_slab_list (const unsigned int id) {
     slabclass_t *p = &slabclass[id];
     if (p->slabs == p->list_size) {
+		/* 按照2倍的方式来增长size class管理的内存 */
         size_t new_size =  (p->list_size != 0) ? p->list_size * 2 : 16;
         void *new_list = realloc(p->slab_list, new_size * sizeof(void *));
         if (new_list == 0) return 0;
@@ -217,12 +229,16 @@ static void split_slab_page_into_freelist(char *ptr, const unsigned int id) {
     slabclass_t *p = &slabclass[id];
     int x;
     for (x = 0; x < p->perslab; x++) {
+		/* do_slabs_free是怎么将slab class管理的内存和ptr关联上的？ */
         do_slabs_free(ptr, 0, id);
         ptr += p->size;
     }
 }
 
 /* Fast FIFO queue */
+/* slab class 0是个特殊的slab，它是全局多个slab class内存池的位置，
+ * 也是rebalance放置的地方
+ */
 static void *get_page_from_global_pool(void) {
     slabclass_t *p = &slabclass[SLAB_GLOBAL_PAGE_POOL];
     if (p->slabs < 1) {
@@ -248,6 +264,11 @@ static int do_slabs_newslab(const unsigned int id) {
         return 0;
     }
 
+	/* 按照顺序来申请内存
+	 * 1. 直接在slab class后面申请内存
+	 * 2. 从slab class 0位置获取内存
+	 * 3. 从预分配的空间中获取内存
+	 */
     if ((grow_slab_list(id) == 0) ||
         (((ptr = get_page_from_global_pool()) == NULL) &&
         ((ptr = memory_allocate((size_t)len)) == 0))) {
@@ -266,6 +287,7 @@ static int do_slabs_newslab(const unsigned int id) {
 }
 
 /* This calculation ends up adding sizeof(void *) to the item size. */
+/* 当单个item已经无法放置下时，该item会被切成多个chunk来存放 */
 static void *do_slabs_alloc_chunked(const size_t size, slabclass_t *p, unsigned int id) {
     void *ret = NULL;
     item *it = NULL;
@@ -1176,41 +1198,7 @@ static int slabs_reassign_pick_any(int dst) {
     return -1;
 }
 
-static enum reassign_result_type do_slabs_reassign(int src, int dst) {
-    if (slab_rebalance_signal != 0)
-        return REASSIGN_RUNNING;
-
-    if (src == dst)
-        return REASSIGN_SRC_DST_SAME;
-
-    /* Special indicator to choose ourselves. */
-    if (src == -1) {
-        src = slabs_reassign_pick_any(dst);
-        /* TODO: If we end up back at -1, return a new error type */
-    }
-
-    if (src < POWER_SMALLEST        || src > power_largest ||
-        dst < SLAB_GLOBAL_PAGE_POOL || dst > power_largest)
-        return REASSIGN_BADCLASS;
-
-    if (slabclass[src].slabs < 2)
-        return REASSIGN_NOSPARE;
-
-    slab_rebal.s_clsid = src;
-    slab_rebal.d_clsid = dst;
-
-    slab_rebalance_signal = 1;
-    pthread_cond_signal(&slab_rebalance_cond);
-
-    return REASSIGN_OK;
-}
-
-enum reassign_result_type slabs_reassign(int src, int dst) {
-    enum reassign_result_type ret;
-    if (pthread_mutex_trylock(&slabs_rebalance_lock) != 0) {
-        return REASSIGN_RUNNING;
-    }
-    ret = do_slabs_reassign(src, dst);
+static enum reassign_result_type gn(src, dst);
     pthread_mutex_unlock(&slabs_rebalance_lock);
     return ret;
 }
