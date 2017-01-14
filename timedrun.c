@@ -33,6 +33,7 @@ static int wait_for_process(pid_t pid)
     /* Loop forever waiting for the process to quit */
     for (i = 0; ;i++) {
         pid_t p = waitpid(pid, &stats, 0);
+		/* waitpid等待的进程正常结束时会返回所等待进程的pid */
         if (p == pid) {
             /* child exited.  Let's get out of here */
             rv = WIFEXITED(stats) ?
@@ -56,6 +57,10 @@ static int wait_for_process(pid_t pid)
                 sig = SIGKILL;
                 break;
             }
+			/* 这里的kill有可能会失败。如果失败则会继续等待，然后继续等待 */
+			/* 弄清楚这里kill失败的原因和场景？*/
+			// https://linux.die.net/man/3/kill
+			/* 貌似就三种场景：信号不合法；无权限；进程不存在*/
             if (kill(pid, sig) < 0) {
                 /* Kill failed.  Must have lost the process. :/ */
                 perror("lost child when trying to kill");
@@ -78,11 +83,13 @@ static int spawn_and_wait(char **argv)
         rv = EX_OSERR;
         break; /* NOTREACHED */
     case 0:
+		/* 子进程继续执行相关的命令 */
         execvp(argv[0], argv);
         perror("exec");
         rv = EX_SOFTWARE;
         break; /* NOTREACHED */
     default:
+		/* 父进程等待子进程停止 */
         rv = wait_for_process(pid);
     }
     return rv;

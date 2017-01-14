@@ -3,19 +3,20 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ADD_STAT	memcached.h	/^typedef void (*ADD_STAT)(const char *key, const uint16_t klen,$/;"	t
-APPEND_NUM_FMT_STAT	memcached.h	/^#define APPEND_NUM_FMT_STAT(/;"	d
-APPEND_NUM_STAT	memcached.h	/^#define APPEND_NUM_STAT(/;"	d
-APPEND_STAT	memcached.h	/^#define APPEND_STAT(/;"	d
-BIG_CONSTANT	murmur3_hash.c	/^#define BIG_CONSTANT(/;"	d	file:
-BIN_PKT_HDR_WORDS	memcached.h	/^#define BIN_PKT_HDR_WORDS /;"	d
+APPEND_NUM_FMT_STAT	memcached.h	127;"	d
+APPEND_NUM_STAT	memcached.h	133;"	d
+APPEND_STAT	memcached.h	122;"	d
+BIG_CONSTANT	murmur3_hash.c	25;"	d	file:
+BIG_CONSTANT	murmur3_hash.c	40;"	d	file:
+BIN_PKT_HDR_WORDS	memcached.h	63;"	d
 BIN_REQ_MAGIC	t/udp.t	/^use constant BIN_REQ_MAGIC    => 0x80;$/;"	c
 BIN_RES_MAGIC	t/udp.t	/^use constant BIN_RES_MAGIC    => 0x81;$/;"	c
-BIPBUFFER_H	bipbuffer.h	/^#define BIPBUFFER_H$/;"	d
-CACHE_H	cache.h	/^#define CACHE_H$/;"	d
-CHUNK_ALIGN_BYTES	memcached.h	/^#define CHUNK_ALIGN_BYTES /;"	d
-CLEAR_LRU	items.h	/^#define CLEAR_LRU(/;"	d
+BIPBUFFER_H	bipbuffer.h	2;"	d
+CACHE_H	cache.h	3;"	d
+CHUNK_ALIGN_BYTES	memcached.h	84;"	d
+CLEAR_LRU	items.h	7;"	d
 CMD_ADD	t/binary-sasl.t	/^use constant CMD_ADD        => 0x02;$/;"	c
 CMD_ADD	t/binary.t	/^use constant CMD_ADD        => 0x02;$/;"	c
 CMD_ADD	t/udp.t	/^use constant CMD_ADD          => 0x02;$/;"	c
@@ -87,23 +88,23 @@ CMD_STAT	t/binary.t	/^use constant CMD_STAT       => 0x10;$/;"	c
 CMD_TOUCH	t/binary.t	/^use constant CMD_TOUCH      => 0x1C;$/;"	c
 CMD_VERSION	t/binary-sasl.t	/^use constant CMD_VERSION    => 0x0B;$/;"	c
 CMD_VERSION	t/binary.t	/^use constant CMD_VERSION    => 0x0B;$/;"	c
-COLD_LRU	items.h	/^#define COLD_LRU /;"	d
-COMMAND_TOKEN	memcached.c	/^#define COMMAND_TOKEN /;"	d	file:
-CONNS_PER_SLICE	memcached.c	/^#define CONNS_PER_SLICE /;"	d	file:
+COLD_LRU	items.h	3;"	d
+COMMAND_TOKEN	memcached.c	2691;"	d	file:
+CONNS_PER_SLICE	memcached.c	303;"	d	file:
 CQ	thread.c	/^typedef struct conn_queue CQ;$/;"	t	typeref:struct:conn_queue	file:
 CQ_ITEM	thread.c	/^typedef struct conn_queue_item CQ_ITEM;$/;"	t	typeref:struct:conn_queue_item	file:
 CRAWLER_BADCLASS	crawler.h	/^    CRAWLER_OK=0, CRAWLER_RUNNING, CRAWLER_BADCLASS, CRAWLER_NOTSTARTED, CRAWLER_ERROR$/;"	e	enum:crawler_result_type
 CRAWLER_ERROR	crawler.h	/^    CRAWLER_OK=0, CRAWLER_RUNNING, CRAWLER_BADCLASS, CRAWLER_NOTSTARTED, CRAWLER_ERROR$/;"	e	enum:crawler_result_type
 CRAWLER_EXPIRED	memcached.h	/^    CRAWLER_EXPIRED=0, CRAWLER_METADUMP$/;"	e	enum:crawler_run_type
-CRAWLER_H	crawler.h	/^#define CRAWLER_H$/;"	d
+CRAWLER_H	crawler.h	2;"	d
 CRAWLER_METADUMP	memcached.h	/^    CRAWLER_EXPIRED=0, CRAWLER_METADUMP$/;"	e	enum:crawler_run_type
 CRAWLER_NOTSTARTED	crawler.h	/^    CRAWLER_OK=0, CRAWLER_RUNNING, CRAWLER_BADCLASS, CRAWLER_NOTSTARTED, CRAWLER_ERROR$/;"	e	enum:crawler_result_type
 CRAWLER_OK	crawler.h	/^    CRAWLER_OK=0, CRAWLER_RUNNING, CRAWLER_BADCLASS, CRAWLER_NOTSTARTED, CRAWLER_ERROR$/;"	e	enum:crawler_result_type
 CRAWLER_RUNNING	crawler.h	/^    CRAWLER_OK=0, CRAWLER_RUNNING, CRAWLER_BADCLASS, CRAWLER_NOTSTARTED, CRAWLER_ERROR$/;"	e	enum:crawler_result_type
-DATA_BUFFER_SIZE	memcached.h	/^#define DATA_BUFFER_SIZE /;"	d
-DEBUG_REFCNT	items.c	/^# define DEBUG_REFCNT(/;"	d	file:
-DEFAULT_HASH_BULK_MOVE	assoc.c	/^#define DEFAULT_HASH_BULK_MOVE /;"	d	file:
-DEFAULT_SLAB_BULK_CHECK	slabs.c	/^#define DEFAULT_SLAB_BULK_CHECK /;"	d	file:
+DATA_BUFFER_SIZE	memcached.h	34;"	d
+DEBUG_REFCNT	items.c	131;"	d	file:
+DEFAULT_HASH_BULK_MOVE	assoc.c	215;"	d	file:
+DEFAULT_SLAB_BULK_CHECK	slabs.c	686;"	d	file:
 DELTA_ITEM_CAS_MISMATCH	memcached.h	/^    OK, NON_NUMERIC, EOM, DELTA_ITEM_NOT_FOUND, DELTA_ITEM_CAS_MISMATCH$/;"	e	enum:delta_result_type
 DELTA_ITEM_NOT_FOUND	memcached.h	/^    OK, NON_NUMERIC, EOM, DELTA_ITEM_NOT_FOUND, DELTA_ITEM_CAS_MISMATCH$/;"	e	enum:delta_result_type
 DESTROY	t/lib/MemcachedTest.pm	/^sub DESTROY {$/;"	s
@@ -126,171 +127,174 @@ ERR_TOO_BIG	t/binary.t	/^use constant ERR_TOO_BIG      => 0x3;$/;"	c
 ERR_UNKNOWN_CMD	t/binary-sasl.t	/^use constant ERR_UNKNOWN_CMD  => 0x81;$/;"	c
 ERR_UNKNOWN_CMD	t/binary.t	/^use constant ERR_UNKNOWN_CMD  => 0x81;$/;"	c
 EXISTS	memcached.h	/^    NOT_STORED=0, STORED, EXISTS, NOT_FOUND, TOO_LARGE, NO_MEMORY$/;"	e	enum:store_item_type
-FORCE_INLINE	murmur3_hash.c	/^#define    FORCE_INLINE /;"	d	file:
-FORCE_INLINE	murmur3_hash.c	/^#define FORCE_INLINE /;"	d	file:
-GET_LOGGER	logger.h	/^#define GET_LOGGER(/;"	d
-HASHPOWER_DEFAULT	memcached.h	/^#define HASHPOWER_DEFAULT /;"	d
-HASH_BIG_ENDIAN	jenkins_hash.c	/^#  define HASH_BIG_ENDIAN /;"	d	file:
-HASH_BIG_ENDIAN	jenkins_hash.c	/^# define HASH_BIG_ENDIAN /;"	d	file:
-HASH_H	hash.h	/^#define    HASH_H$/;"	d
-HASH_LITTLE_ENDIAN	jenkins_hash.c	/^#  define HASH_LITTLE_ENDIAN /;"	d	file:
-HASH_LITTLE_ENDIAN	jenkins_hash.c	/^# define HASH_LITTLE_ENDIAN /;"	d	file:
-HOT_LRU	items.h	/^#define HOT_LRU /;"	d
+FORCE_INLINE	murmur3_hash.c	19;"	d	file:
+FORCE_INLINE	murmur3_hash.c	31;"	d	file:
+GET_LOGGER	logger.h	11;"	d
+HASHPOWER_DEFAULT	memcached.h	66;"	d
+HASH_BIG_ENDIAN	jenkins_hash.c	22;"	d	file:
+HASH_BIG_ENDIAN	jenkins_hash.c	26;"	d	file:
+HASH_BIG_ENDIAN	jenkins_hash.c	29;"	d	file:
+HASH_H	hash.h	2;"	d
+HASH_LITTLE_ENDIAN	jenkins_hash.c	21;"	d	file:
+HASH_LITTLE_ENDIAN	jenkins_hash.c	25;"	d	file:
+HASH_LITTLE_ENDIAN	jenkins_hash.c	28;"	d	file:
+HOT_LRU	items.h	1;"	d
 INCRDECR_PKT_FMT	t/binary-sasl.t	/^use constant INCRDECR_PKT_FMT => "NNNNN";$/;"	c
 INCRDECR_PKT_FMT	t/binary.t	/^use constant INCRDECR_PKT_FMT => "NNNNN";$/;"	c
 INCRDECR_PKT_FMT	t/udp.t	/^use constant INCRDECR_PKT_FMT => "NNNNN";$/;"	c
-INCR_MAX_STORAGE_LEN	memcached.h	/^#define INCR_MAX_STORAGE_LEN /;"	d
-IOV_LIST_HIGHWAT	memcached.h	/^#define IOV_LIST_HIGHWAT /;"	d
-IOV_LIST_INITIAL	memcached.h	/^#define IOV_LIST_INITIAL /;"	d
-IOV_MAX	memcached.c	/^# define IOV_MAX /;"	d	file:
+INCR_MAX_STORAGE_LEN	memcached.h	32;"	d
+IOV_LIST_HIGHWAT	memcached.h	58;"	d
+IOV_LIST_INITIAL	memcached.h	50;"	d
+IOV_MAX	memcached.c	54;"	d	file:
 IS_ASCII	t/udp.t	/^use constant IS_ASCII         => 0;$/;"	c
 IS_BINARY	t/udp.t	/^use constant IS_BINARY        => 1;$/;"	c
-IS_TCP	memcached.h	/^#define IS_TCP(/;"	d
-IS_UDP	memcached.h	/^#define IS_UDP(/;"	d
-ITEMS_PER_ALLOC	thread.c	/^#define ITEMS_PER_ALLOC /;"	d	file:
-ITEM_ACTIVE	memcached.h	/^#define ITEM_ACTIVE /;"	d
-ITEM_CAS	memcached.h	/^#define ITEM_CAS /;"	d
-ITEM_CHUNK	memcached.h	/^#define ITEM_CHUNK /;"	d
-ITEM_CHUNKED	memcached.h	/^#define ITEM_CHUNKED /;"	d
-ITEM_FETCHED	memcached.h	/^#define ITEM_FETCHED /;"	d
-ITEM_LINKED	memcached.h	/^#define ITEM_LINKED /;"	d
-ITEM_LIST_HIGHWAT	memcached.h	/^#define ITEM_LIST_HIGHWAT /;"	d
-ITEM_LIST_INITIAL	memcached.h	/^#define ITEM_LIST_INITIAL /;"	d
-ITEM_SLABBED	memcached.h	/^#define ITEM_SLABBED /;"	d
-ITEM_UPDATE_INTERVAL	memcached.h	/^#define ITEM_UPDATE_INTERVAL /;"	d
-ITEM_clsid	memcached.h	/^#define ITEM_clsid(/;"	d
-ITEM_data	memcached.h	/^#define ITEM_data(/;"	d
-ITEM_get_cas	memcached.h	/^#define ITEM_get_cas(/;"	d
-ITEM_key	memcached.h	/^#define ITEM_key(/;"	d
-ITEM_ntotal	memcached.h	/^#define ITEM_ntotal(/;"	d
-ITEM_set_cas	memcached.h	/^#define ITEM_set_cas(/;"	d
-ITEM_suffix	memcached.h	/^#define ITEM_suffix(/;"	d
-ITERATIONS	testapp.c	/^#define ITERATIONS /;"	d	file:
-ITERATIONS	testapp.c	/^#undef ITERATIONS$/;"	d	file:
+IS_TCP	memcached.h	205;"	d
+IS_UDP	memcached.h	206;"	d
+ITEMS_PER_ALLOC	thread.c	17;"	d	file:
+ITEM_ACTIVE	memcached.h	388;"	d
+ITEM_CAS	memcached.h	380;"	d
+ITEM_CHUNK	memcached.h	391;"	d
+ITEM_CHUNKED	memcached.h	390;"	d
+ITEM_FETCHED	memcached.h	386;"	d
+ITEM_LINKED	memcached.h	379;"	d
+ITEM_LIST_HIGHWAT	memcached.h	57;"	d
+ITEM_LIST_INITIAL	memcached.h	44;"	d
+ITEM_SLABBED	memcached.h	383;"	d
+ITEM_UPDATE_INTERVAL	memcached.h	73;"	d
+ITEM_clsid	memcached.h	116;"	d
+ITEM_data	memcached.h	108;"	d
+ITEM_get_cas	memcached.h	93;"	d
+ITEM_key	memcached.h	102;"	d
+ITEM_ntotal	memcached.h	112;"	d
+ITEM_set_cas	memcached.h	96;"	d
+ITEM_suffix	memcached.h	105;"	d
+ITERATIONS	testapp.c	122;"	d	file:
+ITERATIONS	testapp.c	135;"	d	file:
 JENKINS_HASH	hash.h	/^    JENKINS_HASH=0, MURMUR3_HASH$/;"	e	enum:hashfunc_type
-JENKINS_HASH_H	jenkins_hash.h	/^#define    JENKINS_HASH_H$/;"	d
-KEY_MAX_LENGTH	memcached.h	/^#define KEY_MAX_LENGTH /;"	d
-KEY_TOKEN	memcached.c	/^#define KEY_TOKEN /;"	d	file:
-LARGEST_ID	crawler.c	/^#define LARGEST_ID /;"	d	file:
-LARGEST_ID	items.c	/^#define LARGEST_ID /;"	d	file:
-LIBEVENT_THREAD	memcached.h	/^} LIBEVENT_THREAD;$/;"	t	typeref:struct:__anon12
+JENKINS_HASH_H	jenkins_hash.h	2;"	d
+KEY_MAX_LENGTH	memcached.h	29;"	d
+KEY_TOKEN	memcached.c	2693;"	d	file:
+LARGEST_ID	crawler.c	24;"	d	file:
+LARGEST_ID	items.c	24;"	d	file:
+LIBEVENT_THREAD	memcached.h	/^} LIBEVENT_THREAD;$/;"	t	typeref:struct:__anon4
 LOGGER_ADD_WATCHER_FAILED	logger.h	/^    LOGGER_ADD_WATCHER_FAILED$/;"	e	enum:logger_add_watcher_ret
 LOGGER_ADD_WATCHER_OK	logger.h	/^    LOGGER_ADD_WATCHER_OK,$/;"	e	enum:logger_add_watcher_ret
 LOGGER_ADD_WATCHER_TOO_MANY	logger.h	/^    LOGGER_ADD_WATCHER_TOO_MANY = 0,$/;"	e	enum:logger_add_watcher_ret
 LOGGER_ASCII_CMD	logger.h	/^    LOGGER_ASCII_CMD = 0,$/;"	e	enum:log_entry_type
-LOGGER_BUF_SIZE	logger.h	/^#define LOGGER_BUF_SIZE /;"	d
-LOGGER_ENTRY_MAX_SIZE	logger.h	/^#define LOGGER_ENTRY_MAX_SIZE /;"	d
+LOGGER_BUF_SIZE	logger.h	8;"	d
+LOGGER_ENTRY_MAX_SIZE	logger.h	10;"	d
 LOGGER_EVICTION	logger.h	/^    LOGGER_EVICTION,$/;"	e	enum:log_entry_type
 LOGGER_EVICTION_ENTRY	logger.h	/^    LOGGER_EVICTION_ENTRY,$/;"	e	enum:log_entry_subtype
-LOGGER_H	logger.h	/^#define LOGGER_H$/;"	d
+LOGGER_H	logger.h	3;"	d
 LOGGER_ITEM_GET	logger.h	/^    LOGGER_ITEM_GET,$/;"	e	enum:log_entry_type
 LOGGER_ITEM_GET_ENTRY	logger.h	/^    LOGGER_ITEM_GET_ENTRY,$/;"	e	enum:log_entry_subtype
 LOGGER_ITEM_STORE	logger.h	/^    LOGGER_ITEM_STORE$/;"	e	enum:log_entry_type
 LOGGER_ITEM_STORE_ENTRY	logger.h	/^    LOGGER_ITEM_STORE_ENTRY$/;"	e	enum:log_entry_subtype
-LOGGER_LOG	logger.h	/^#define LOGGER_LOG(/;"	d
+LOGGER_LOG	logger.h	136;"	d
 LOGGER_PARSE_ENTRY_FAILED	logger.h	/^    LOGGER_PARSE_ENTRY_FAILED$/;"	e	enum:logger_parse_entry_ret
 LOGGER_PARSE_ENTRY_FULLBUF	logger.h	/^    LOGGER_PARSE_ENTRY_FULLBUF,$/;"	e	enum:logger_parse_entry_ret
 LOGGER_PARSE_ENTRY_OK	logger.h	/^    LOGGER_PARSE_ENTRY_OK = 0,$/;"	e	enum:logger_parse_entry_ret
-LOGGER_PARSE_SCRATCH	logger.c	/^#define LOGGER_PARSE_SCRATCH /;"	d	file:
+LOGGER_PARSE_SCRATCH	logger.c	140;"	d	file:
 LOGGER_RET_ERR	logger.h	/^    LOGGER_RET_ERR$/;"	e	enum:logger_ret_type
 LOGGER_RET_NOSPACE	logger.h	/^    LOGGER_RET_NOSPACE,$/;"	e	enum:logger_ret_type
 LOGGER_RET_OK	logger.h	/^    LOGGER_RET_OK = 0,$/;"	e	enum:logger_ret_type
 LOGGER_TEXT_ENTRY	logger.h	/^    LOGGER_TEXT_ENTRY = 0,$/;"	e	enum:log_entry_subtype
-LOGGER_WATCHER_BUF_SIZE	logger.h	/^#define LOGGER_WATCHER_BUF_SIZE /;"	d
+LOGGER_WATCHER_BUF_SIZE	logger.h	9;"	d
 LOGGER_WATCHER_CLIENT	logger.h	/^    LOGGER_WATCHER_CLIENT = 1$/;"	e	enum:logger_watcher_type
 LOGGER_WATCHER_STDERR	logger.h	/^    LOGGER_WATCHER_STDERR = 0,$/;"	e	enum:logger_watcher_type
-LOG_CONNEVENTS	logger.h	/^#define LOG_CONNEVENTS /;"	d
-LOG_EVICTIONS	logger.h	/^#define LOG_EVICTIONS /;"	d
-LOG_FETCHERS	logger.h	/^#define LOG_FETCHERS /;"	d
-LOG_MUTATIONS	logger.h	/^#define LOG_MUTATIONS /;"	d
-LOG_RAWCMDS	logger.h	/^#define LOG_RAWCMDS /;"	d
-LOG_STRICT	logger.h	/^#define LOG_STRICT /;"	d
-LOG_SYSERRORS	logger.h	/^#define LOG_SYSERRORS /;"	d
-LOG_SYSEVENTS	logger.h	/^#define LOG_SYSEVENTS /;"	d
-LRU_CRAWLER_WRITEBUF	crawler.c	/^#define LRU_CRAWLER_WRITEBUF /;"	d	file:
-LRU_PULL_CRAWL_BLOCKS	items.c	/^#define LRU_PULL_CRAWL_BLOCKS /;"	d	file:
-LRU_PULL_EVICT	items.c	/^#define LRU_PULL_EVICT /;"	d	file:
-L_DEBUG	logger.c	/^#define L_DEBUG(/;"	d	file:
-MAXPATHLEN	memcached.c	/^#define MAXPATHLEN /;"	d	file:
-MAX_ENTRY_LEN	sasl_defs.c	/^#define MAX_ENTRY_LEN /;"	d	file:
-MAX_LOGGER_SLEEP	logger.c	/^#define MAX_LOGGER_SLEEP /;"	d	file:
-MAX_LRU_MAINTAINER_SLEEP	items.c	/^#define MAX_LRU_MAINTAINER_SLEEP /;"	d	file:
-MAX_MAINTCRAWL_WAIT	crawler.c	/^#define MAX_MAINTCRAWL_WAIT /;"	d	file:
-MAX_MAINTCRAWL_WAIT	items.c	/^#define MAX_MAINTCRAWL_WAIT /;"	d	file:
-MAX_NUMBER_OF_SLAB_CLASSES	memcached.h	/^#define MAX_NUMBER_OF_SLAB_CLASSES /;"	d
-MAX_SASL_MECH_LEN	sasl_defs.h	/^#define MAX_SASL_MECH_LEN /;"	d
-MAX_SENDBUF_SIZE	memcached.h	/^#define MAX_SENDBUF_SIZE /;"	d
-MAX_TOKENS	memcached.c	/^#define MAX_TOKENS /;"	d	file:
-MAX_VERBOSITY_LEVEL	memcached.h	/^#define MAX_VERBOSITY_LEVEL /;"	d
+LOG_CONNEVENTS	logger.h	86;"	d
+LOG_EVICTIONS	logger.h	87;"	d
+LOG_FETCHERS	logger.h	83;"	d
+LOG_MUTATIONS	logger.h	84;"	d
+LOG_RAWCMDS	logger.h	89;"	d
+LOG_STRICT	logger.h	88;"	d
+LOG_SYSERRORS	logger.h	85;"	d
+LOG_SYSEVENTS	logger.h	82;"	d
+LRU_CRAWLER_WRITEBUF	crawler.c	108;"	d	file:
+LRU_PULL_CRAWL_BLOCKS	items.c	80;"	d	file:
+LRU_PULL_EVICT	items.c	79;"	d	file:
+L_DEBUG	logger.c	14;"	d	file:
+L_DEBUG	logger.c	19;"	d	file:
+MAXPATHLEN	memcached.c	58;"	d	file:
+MAX_ENTRY_LEN	sasl_defs.c	26;"	d	file:
+MAX_LOGGER_SLEEP	logger.c	449;"	d	file:
+MAX_LRU_MAINTAINER_SLEEP	items.c	1147;"	d	file:
+MAX_MAINTCRAWL_WAIT	crawler.c	104;"	d	file:
+MAX_MAINTCRAWL_WAIT	items.c	1063;"	d	file:
+MAX_NUMBER_OF_SLAB_CLASSES	memcached.h	86;"	d
+MAX_SASL_MECH_LEN	sasl_defs.h	5;"	d
+MAX_SENDBUF_SIZE	memcached.h	38;"	d
+MAX_TOKENS	memcached.c	2695;"	d	file:
+MAX_VERBOSITY_LEVEL	memcached.h	320;"	d
 MC::Client	t/binary-sasl.t	/^package MC::Client;$/;"	p
 MC::Client	t/binary.t	/^package MC::Client;$/;"	p
 MC::Error	t/binary-sasl.t	/^package MC::Error;$/;"	p
 MC::Error	t/binary.t	/^package MC::Error;$/;"	p
-MEMCACHED_ASSOC_DELETE	trace.h	/^#define MEMCACHED_ASSOC_DELETE(/;"	d
-MEMCACHED_ASSOC_DELETE_ENABLED	trace.h	/^#define MEMCACHED_ASSOC_DELETE_ENABLED(/;"	d
-MEMCACHED_ASSOC_FIND	trace.h	/^#define MEMCACHED_ASSOC_FIND(/;"	d
-MEMCACHED_ASSOC_FIND_ENABLED	trace.h	/^#define MEMCACHED_ASSOC_FIND_ENABLED(/;"	d
-MEMCACHED_ASSOC_INSERT	trace.h	/^#define MEMCACHED_ASSOC_INSERT(/;"	d
-MEMCACHED_ASSOC_INSERT_ENABLED	trace.h	/^#define MEMCACHED_ASSOC_INSERT_ENABLED(/;"	d
-MEMCACHED_COMMAND_ADD	trace.h	/^#define MEMCACHED_COMMAND_ADD(/;"	d
-MEMCACHED_COMMAND_ADD_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_ADD_ENABLED(/;"	d
-MEMCACHED_COMMAND_APPEND	trace.h	/^#define MEMCACHED_COMMAND_APPEND(/;"	d
-MEMCACHED_COMMAND_APPEND_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_APPEND_ENABLED(/;"	d
-MEMCACHED_COMMAND_CAS	trace.h	/^#define MEMCACHED_COMMAND_CAS(/;"	d
-MEMCACHED_COMMAND_CAS_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_CAS_ENABLED(/;"	d
-MEMCACHED_COMMAND_DECR	trace.h	/^#define MEMCACHED_COMMAND_DECR(/;"	d
-MEMCACHED_COMMAND_DECR_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_DECR_ENABLED(/;"	d
-MEMCACHED_COMMAND_DELETE	trace.h	/^#define MEMCACHED_COMMAND_DELETE(/;"	d
-MEMCACHED_COMMAND_DELETE_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_DELETE_ENABLED(/;"	d
-MEMCACHED_COMMAND_GET	trace.h	/^#define MEMCACHED_COMMAND_GET(/;"	d
-MEMCACHED_COMMAND_GET_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_GET_ENABLED(/;"	d
-MEMCACHED_COMMAND_INCR	trace.h	/^#define MEMCACHED_COMMAND_INCR(/;"	d
-MEMCACHED_COMMAND_INCR_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_INCR_ENABLED(/;"	d
-MEMCACHED_COMMAND_PREPEND	trace.h	/^#define MEMCACHED_COMMAND_PREPEND(/;"	d
-MEMCACHED_COMMAND_PREPEND_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_PREPEND_ENABLED(/;"	d
-MEMCACHED_COMMAND_REPLACE	trace.h	/^#define MEMCACHED_COMMAND_REPLACE(/;"	d
-MEMCACHED_COMMAND_REPLACE_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_REPLACE_ENABLED(/;"	d
-MEMCACHED_COMMAND_SET	trace.h	/^#define MEMCACHED_COMMAND_SET(/;"	d
-MEMCACHED_COMMAND_SET_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_SET_ENABLED(/;"	d
-MEMCACHED_COMMAND_TOUCH	trace.h	/^#define MEMCACHED_COMMAND_TOUCH(/;"	d
-MEMCACHED_COMMAND_TOUCH_ENABLED	trace.h	/^#define MEMCACHED_COMMAND_TOUCH_ENABLED(/;"	d
-MEMCACHED_CONN_ALLOCATE	trace.h	/^#define MEMCACHED_CONN_ALLOCATE(/;"	d
-MEMCACHED_CONN_ALLOCATE_ENABLED	trace.h	/^#define MEMCACHED_CONN_ALLOCATE_ENABLED(/;"	d
-MEMCACHED_CONN_CREATE	trace.h	/^#define MEMCACHED_CONN_CREATE(/;"	d
-MEMCACHED_CONN_CREATE_ENABLED	trace.h	/^#define MEMCACHED_CONN_CREATE_ENABLED(/;"	d
-MEMCACHED_CONN_DESTROY	trace.h	/^#define MEMCACHED_CONN_DESTROY(/;"	d
-MEMCACHED_CONN_DESTROY_ENABLED	trace.h	/^#define MEMCACHED_CONN_DESTROY_ENABLED(/;"	d
-MEMCACHED_CONN_DISPATCH	trace.h	/^#define MEMCACHED_CONN_DISPATCH(/;"	d
-MEMCACHED_CONN_DISPATCH_ENABLED	trace.h	/^#define MEMCACHED_CONN_DISPATCH_ENABLED(/;"	d
-MEMCACHED_CONN_RELEASE	trace.h	/^#define MEMCACHED_CONN_RELEASE(/;"	d
-MEMCACHED_CONN_RELEASE_ENABLED	trace.h	/^#define MEMCACHED_CONN_RELEASE_ENABLED(/;"	d
-MEMCACHED_ITEM_LINK	trace.h	/^#define MEMCACHED_ITEM_LINK(/;"	d
-MEMCACHED_ITEM_LINK_ENABLED	trace.h	/^#define MEMCACHED_ITEM_LINK_ENABLED(/;"	d
-MEMCACHED_ITEM_REMOVE	trace.h	/^#define MEMCACHED_ITEM_REMOVE(/;"	d
-MEMCACHED_ITEM_REMOVE_ENABLED	trace.h	/^#define MEMCACHED_ITEM_REMOVE_ENABLED(/;"	d
-MEMCACHED_ITEM_REPLACE	trace.h	/^#define MEMCACHED_ITEM_REPLACE(/;"	d
-MEMCACHED_ITEM_REPLACE_ENABLED	trace.h	/^#define MEMCACHED_ITEM_REPLACE_ENABLED(/;"	d
-MEMCACHED_ITEM_UNLINK	trace.h	/^#define MEMCACHED_ITEM_UNLINK(/;"	d
-MEMCACHED_ITEM_UNLINK_ENABLED	trace.h	/^#define MEMCACHED_ITEM_UNLINK_ENABLED(/;"	d
-MEMCACHED_ITEM_UPDATE	trace.h	/^#define MEMCACHED_ITEM_UPDATE(/;"	d
-MEMCACHED_ITEM_UPDATE_ENABLED	trace.h	/^#define MEMCACHED_ITEM_UPDATE_ENABLED(/;"	d
-MEMCACHED_PROCESS_COMMAND_END	trace.h	/^#define MEMCACHED_PROCESS_COMMAND_END(/;"	d
-MEMCACHED_PROCESS_COMMAND_END_ENABLED	trace.h	/^#define MEMCACHED_PROCESS_COMMAND_END_ENABLED(/;"	d
-MEMCACHED_PROCESS_COMMAND_START	trace.h	/^#define MEMCACHED_PROCESS_COMMAND_START(/;"	d
-MEMCACHED_PROCESS_COMMAND_START_ENABLED	trace.h	/^#define MEMCACHED_PROCESS_COMMAND_START_ENABLED(/;"	d
-MEMCACHED_SLABS_ALLOCATE	trace.h	/^#define MEMCACHED_SLABS_ALLOCATE(/;"	d
-MEMCACHED_SLABS_ALLOCATE_ENABLED	trace.h	/^#define MEMCACHED_SLABS_ALLOCATE_ENABLED(/;"	d
-MEMCACHED_SLABS_ALLOCATE_FAILED	trace.h	/^#define MEMCACHED_SLABS_ALLOCATE_FAILED(/;"	d
-MEMCACHED_SLABS_ALLOCATE_FAILED_ENABLED	trace.h	/^#define MEMCACHED_SLABS_ALLOCATE_FAILED_ENABLED(/;"	d
-MEMCACHED_SLABS_FREE	trace.h	/^#define MEMCACHED_SLABS_FREE(/;"	d
-MEMCACHED_SLABS_FREE_ENABLED	trace.h	/^#define MEMCACHED_SLABS_FREE_ENABLED(/;"	d
-MEMCACHED_SLABS_SLABCLASS_ALLOCATE	trace.h	/^#define MEMCACHED_SLABS_SLABCLASS_ALLOCATE(/;"	d
-MEMCACHED_SLABS_SLABCLASS_ALLOCATE_ENABLED	trace.h	/^#define MEMCACHED_SLABS_SLABCLASS_ALLOCATE_ENABLED(/;"	d
-MEMCACHED_SLABS_SLABCLASS_ALLOCATE_FAILED	trace.h	/^#define MEMCACHED_SLABS_SLABCLASS_ALLOCATE_FAILED(/;"	d
-MEMCACHED_SLABS_SLABCLASS_ALLOCATE_FAILED_ENABLED	trace.h	/^#define MEMCACHED_SLABS_SLABCLASS_ALLOCATE_FAILED_ENABLED(/;"	d
-MIN_BIN_PKT_LENGTH	memcached.h	/^#define MIN_BIN_PKT_LENGTH /;"	d
-MIN_LOGGER_SLEEP	logger.c	/^#define MIN_LOGGER_SLEEP /;"	d	file:
-MIN_LRU_MAINTAINER_SLEEP	items.c	/^#define MIN_LRU_MAINTAINER_SLEEP /;"	d	file:
+MEMCACHED_ASSOC_DELETE	trace.h	7;"	d
+MEMCACHED_ASSOC_DELETE_ENABLED	trace.h	8;"	d
+MEMCACHED_ASSOC_FIND	trace.h	9;"	d
+MEMCACHED_ASSOC_FIND_ENABLED	trace.h	10;"	d
+MEMCACHED_ASSOC_INSERT	trace.h	11;"	d
+MEMCACHED_ASSOC_INSERT_ENABLED	trace.h	12;"	d
+MEMCACHED_COMMAND_ADD	trace.h	13;"	d
+MEMCACHED_COMMAND_ADD_ENABLED	trace.h	14;"	d
+MEMCACHED_COMMAND_APPEND	trace.h	15;"	d
+MEMCACHED_COMMAND_APPEND_ENABLED	trace.h	16;"	d
+MEMCACHED_COMMAND_CAS	trace.h	17;"	d
+MEMCACHED_COMMAND_CAS_ENABLED	trace.h	18;"	d
+MEMCACHED_COMMAND_DECR	trace.h	19;"	d
+MEMCACHED_COMMAND_DECR_ENABLED	trace.h	20;"	d
+MEMCACHED_COMMAND_DELETE	trace.h	21;"	d
+MEMCACHED_COMMAND_DELETE_ENABLED	trace.h	22;"	d
+MEMCACHED_COMMAND_GET	trace.h	23;"	d
+MEMCACHED_COMMAND_GET_ENABLED	trace.h	24;"	d
+MEMCACHED_COMMAND_INCR	trace.h	27;"	d
+MEMCACHED_COMMAND_INCR_ENABLED	trace.h	28;"	d
+MEMCACHED_COMMAND_PREPEND	trace.h	29;"	d
+MEMCACHED_COMMAND_PREPEND_ENABLED	trace.h	30;"	d
+MEMCACHED_COMMAND_REPLACE	trace.h	31;"	d
+MEMCACHED_COMMAND_REPLACE_ENABLED	trace.h	32;"	d
+MEMCACHED_COMMAND_SET	trace.h	33;"	d
+MEMCACHED_COMMAND_SET_ENABLED	trace.h	34;"	d
+MEMCACHED_COMMAND_TOUCH	trace.h	25;"	d
+MEMCACHED_COMMAND_TOUCH_ENABLED	trace.h	26;"	d
+MEMCACHED_CONN_ALLOCATE	trace.h	35;"	d
+MEMCACHED_CONN_ALLOCATE_ENABLED	trace.h	36;"	d
+MEMCACHED_CONN_CREATE	trace.h	37;"	d
+MEMCACHED_CONN_CREATE_ENABLED	trace.h	38;"	d
+MEMCACHED_CONN_DESTROY	trace.h	39;"	d
+MEMCACHED_CONN_DESTROY_ENABLED	trace.h	40;"	d
+MEMCACHED_CONN_DISPATCH	trace.h	41;"	d
+MEMCACHED_CONN_DISPATCH_ENABLED	trace.h	42;"	d
+MEMCACHED_CONN_RELEASE	trace.h	43;"	d
+MEMCACHED_CONN_RELEASE_ENABLED	trace.h	44;"	d
+MEMCACHED_ITEM_LINK	trace.h	45;"	d
+MEMCACHED_ITEM_LINK_ENABLED	trace.h	46;"	d
+MEMCACHED_ITEM_REMOVE	trace.h	47;"	d
+MEMCACHED_ITEM_REMOVE_ENABLED	trace.h	48;"	d
+MEMCACHED_ITEM_REPLACE	trace.h	49;"	d
+MEMCACHED_ITEM_REPLACE_ENABLED	trace.h	50;"	d
+MEMCACHED_ITEM_UNLINK	trace.h	51;"	d
+MEMCACHED_ITEM_UNLINK_ENABLED	trace.h	52;"	d
+MEMCACHED_ITEM_UPDATE	trace.h	53;"	d
+MEMCACHED_ITEM_UPDATE_ENABLED	trace.h	54;"	d
+MEMCACHED_PROCESS_COMMAND_END	trace.h	55;"	d
+MEMCACHED_PROCESS_COMMAND_END_ENABLED	trace.h	56;"	d
+MEMCACHED_PROCESS_COMMAND_START	trace.h	57;"	d
+MEMCACHED_PROCESS_COMMAND_START_ENABLED	trace.h	58;"	d
+MEMCACHED_SLABS_ALLOCATE	trace.h	59;"	d
+MEMCACHED_SLABS_ALLOCATE_ENABLED	trace.h	60;"	d
+MEMCACHED_SLABS_ALLOCATE_FAILED	trace.h	61;"	d
+MEMCACHED_SLABS_ALLOCATE_FAILED_ENABLED	trace.h	62;"	d
+MEMCACHED_SLABS_FREE	trace.h	63;"	d
+MEMCACHED_SLABS_FREE_ENABLED	trace.h	64;"	d
+MEMCACHED_SLABS_SLABCLASS_ALLOCATE	trace.h	65;"	d
+MEMCACHED_SLABS_SLABCLASS_ALLOCATE_ENABLED	trace.h	66;"	d
+MEMCACHED_SLABS_SLABCLASS_ALLOCATE_FAILED	trace.h	67;"	d
+MEMCACHED_SLABS_SLABCLASS_ALLOCATE_FAILED_ENABLED	trace.h	68;"	d
+MIN_BIN_PKT_LENGTH	memcached.h	62;"	d
+MIN_LOGGER_SLEEP	logger.c	450;"	d	file:
+MIN_LRU_MAINTAINER_SLEEP	items.c	1148;"	d	file:
 MIN_RECV_BYTES	t/binary-sasl.t	/^use constant MIN_RECV_BYTES   => length(pack(RES_PKT_FMT));$/;"	c
 MIN_RECV_BYTES	t/binary.t	/^use constant MIN_RECV_BYTES   => length(pack(RES_PKT_FMT));$/;"	c
 MIN_RECV_BYTES	t/udp.t	/^use constant MIN_RECV_BYTES   => length(pack(RES_PKT_FMT));$/;"	c
@@ -299,101 +303,101 @@ MOVE_FROM_LRU	slabs.c	/^    MOVE_PASS=0, MOVE_FROM_SLAB, MOVE_FROM_LRU, MOVE_BUS
 MOVE_FROM_SLAB	slabs.c	/^    MOVE_PASS=0, MOVE_FROM_SLAB, MOVE_FROM_LRU, MOVE_BUSY, MOVE_LOCKED$/;"	e	enum:move_status	file:
 MOVE_LOCKED	slabs.c	/^    MOVE_PASS=0, MOVE_FROM_SLAB, MOVE_FROM_LRU, MOVE_BUSY, MOVE_LOCKED$/;"	e	enum:move_status	file:
 MOVE_PASS	slabs.c	/^    MOVE_PASS=0, MOVE_FROM_SLAB, MOVE_FROM_LRU, MOVE_BUSY, MOVE_LOCKED$/;"	e	enum:move_status	file:
-MSG_LIST_HIGHWAT	memcached.h	/^#define MSG_LIST_HIGHWAT /;"	d
-MSG_LIST_INITIAL	memcached.h	/^#define MSG_LIST_INITIAL /;"	d
+MSG_LIST_HIGHWAT	memcached.h	59;"	d
+MSG_LIST_INITIAL	memcached.h	53;"	d
 MURMUR3_HASH	hash.h	/^    JENKINS_HASH=0, MURMUR3_HASH$/;"	e	enum:hashfunc_type
-MURMURHASH3_H	murmur3_hash.h	/^#define MURMURHASH3_H$/;"	d
+MURMURHASH3_H	murmur3_hash.h	6;"	d
 Memcached::Handle	t/lib/MemcachedTest.pm	/^package Memcached::Handle;$/;"	p
 MemcachedTest	t/lib/MemcachedTest.pm	/^package MemcachedTest;$/;"	p
 MurmurHash3_x86_32	murmur3_hash.c	/^uint32_t MurmurHash3_x86_32 ( const void * key, size_t length)$/;"	f
-NDEBUG	testapp.c	/^#undef NDEBUG$/;"	d	file:
-NOEXP_LRU	items.h	/^#define NOEXP_LRU /;"	d
+NDEBUG	testapp.c	2;"	d	file:
+NOEXP_LRU	items.h	4;"	d
 NON_NUMERIC	memcached.h	/^    OK, NON_NUMERIC, EOM, DELTA_ITEM_NOT_FOUND, DELTA_ITEM_CAS_MISMATCH$/;"	e	enum:delta_result_type
 NOT_FOUND	memcached.h	/^    NOT_STORED=0, STORED, EXISTS, NOT_FOUND, TOO_LARGE, NO_MEMORY$/;"	e	enum:store_item_type
 NOT_STORED	memcached.h	/^    NOT_STORED=0, STORED, EXISTS, NOT_FOUND, TOO_LARGE, NO_MEMORY$/;"	e	enum:store_item_type
 NO_MEMORY	memcached.h	/^    NOT_STORED=0, STORED, EXISTS, NOT_FOUND, TOO_LARGE, NO_MEMORY$/;"	e	enum:store_item_type
-NREAD_ADD	memcached.h	/^#define NREAD_ADD /;"	d
-NREAD_APPEND	memcached.h	/^#define NREAD_APPEND /;"	d
-NREAD_CAS	memcached.h	/^#define NREAD_CAS /;"	d
-NREAD_PREPEND	memcached.h	/^#define NREAD_PREPEND /;"	d
-NREAD_REPLACE	memcached.h	/^#define NREAD_REPLACE /;"	d
-NREAD_SET	memcached.h	/^#define NREAD_SET /;"	d
+NREAD_ADD	memcached.h	208;"	d
+NREAD_APPEND	memcached.h	211;"	d
+NREAD_CAS	memcached.h	213;"	d
+NREAD_PREPEND	memcached.h	212;"	d
+NREAD_REPLACE	memcached.h	210;"	d
+NREAD_SET	memcached.h	209;"	d
 OK	memcached.h	/^    OK, NON_NUMERIC, EOM, DELTA_ITEM_NOT_FOUND, DELTA_ITEM_CAS_MISMATCH$/;"	e	enum:delta_result_type
 PAUSE_ALL_THREADS	memcached.h	/^    PAUSE_ALL_THREADS,$/;"	e	enum:pause_thread_types
 PAUSE_WORKER_THREADS	memcached.h	/^    PAUSE_WORKER_THREADS = 0,$/;"	e	enum:pause_thread_types
-POWER_LARGEST	memcached.h	/^#define POWER_LARGEST /;"	d
-POWER_SMALLEST	memcached.h	/^#define POWER_SMALLEST /;"	d
-PREFIX_HASH_SIZE	stats.c	/^#define PREFIX_HASH_SIZE /;"	d	file:
+POWER_LARGEST	memcached.h	82;"	d
+POWER_SMALLEST	memcached.h	81;"	d
+PREFIX_HASH_SIZE	stats.c	32;"	d	file:
 PREFIX_STATS	stats.c	/^typedef struct _prefix_stats PREFIX_STATS;$/;"	t	typeref:struct:_prefix_stats	file:
-PROTOCOL_BINARY_CMD_ADD	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_ADD = 0x02,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_ADDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_ADDQ = 0x12,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_APPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_APPEND = 0x0e,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_APPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_APPENDQ = 0x19,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_DECREMENT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DECREMENT = 0x06,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_DECREMENTQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DECREMENTQ = 0x16,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_DELETE	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DELETE = 0x04,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_DELETEQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DELETEQ = 0x14,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_FLUSH	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_FLUSH = 0x08,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_FLUSHQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_FLUSHQ = 0x18,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GAT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GAT = 0x1d,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GATK	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GATK = 0x23,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GATKQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GATKQ = 0x24,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GATQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GATQ = 0x1e,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GET = 0x00,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GETK	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GETK = 0x0c,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GETKQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GETKQ = 0x0d,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_GETQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GETQ = 0x09,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_INCREMENT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_INCREMENT = 0x05,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_INCREMENTQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_INCREMENTQ = 0x15,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_NOOP	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_NOOP = 0x0a,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_PREPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_PREPEND = 0x0f,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_PREPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_PREPENDQ = 0x1a,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_QUIT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_QUIT = 0x07,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_QUITQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_QUITQ = 0x17,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RAPPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RAPPEND   = 0x33,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RAPPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RAPPENDQ  = 0x34,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RDECR	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDECR     = 0x3b,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RDECRQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDECRQ    = 0x3c$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RDELETE	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDELETE   = 0x37,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RDELETEQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDELETEQ  = 0x38,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_REPLACE	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_REPLACE = 0x03,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_REPLACEQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_REPLACEQ = 0x13,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RGET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RGET      = 0x30,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RINCR	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RINCR     = 0x39,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RINCRQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RINCRQ    = 0x3a,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RPREPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RPREPEND  = 0x35,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RPREPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RPREPENDQ = 0x36,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RSET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RSET      = 0x31,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_RSETQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RSETQ     = 0x32,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_SASL_AUTH	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SASL_AUTH = 0x21,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_SASL_LIST_MECHS	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SASL_LIST_MECHS = 0x20,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_SASL_STEP	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SASL_STEP = 0x22,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_SET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SET = 0x01,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_SETQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SETQ = 0x11,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_STAT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_STAT = 0x10,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_TOUCH	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_TOUCH = 0x1c,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_CMD_VERSION	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_VERSION = 0x0b,$/;"	e	enum:__anon16
-PROTOCOL_BINARY_H	protocol_binary.h	/^#define PROTOCOL_BINARY_H$/;"	d
-PROTOCOL_BINARY_RAW_BYTES	protocol_binary.h	/^        PROTOCOL_BINARY_RAW_BYTES = 0x00$/;"	e	enum:__anon17
-PROTOCOL_BINARY_REQ	protocol_binary.h	/^        PROTOCOL_BINARY_REQ = 0x80,$/;"	e	enum:__anon14
-PROTOCOL_BINARY_RES	protocol_binary.h	/^        PROTOCOL_BINARY_RES = 0x81$/;"	e	enum:__anon14
-PROTOCOL_BINARY_RESPONSE_AUTH_CONTINUE	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_AUTH_CONTINUE = 0x21,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_AUTH_ERROR	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_AUTH_ERROR = 0x20,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_DELTA_BADVAL	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_DELTA_BADVAL = 0x06,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_E2BIG	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_E2BIG = 0x03,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_EINVAL	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_EINVAL = 0x04,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_ENOMEM	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_ENOMEM = 0x82$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_KEY_EEXISTS	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_KEY_EEXISTS = 0x02,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_KEY_ENOENT	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_KEY_ENOENT = 0x01,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_NOT_STORED	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_NOT_STORED = 0x05,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_SUCCESS	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_SUCCESS = 0x00,$/;"	e	enum:__anon15
-PROTOCOL_BINARY_RESPONSE_UNKNOWN_COMMAND	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_UNKNOWN_COMMAND = 0x81,$/;"	e	enum:__anon15
-READ_BUFFER_HIGHWAT	memcached.h	/^#define READ_BUFFER_HIGHWAT /;"	d
+PROTOCOL_BINARY_CMD_ADD	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_ADD = 0x02,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_ADDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_ADDQ = 0x12,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_APPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_APPEND = 0x0e,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_APPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_APPENDQ = 0x19,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_DECREMENT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DECREMENT = 0x06,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_DECREMENTQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DECREMENTQ = 0x16,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_DELETE	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DELETE = 0x04,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_DELETEQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_DELETEQ = 0x14,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_FLUSH	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_FLUSH = 0x08,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_FLUSHQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_FLUSHQ = 0x18,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GAT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GAT = 0x1d,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GATK	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GATK = 0x23,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GATKQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GATKQ = 0x24,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GATQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GATQ = 0x1e,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GET = 0x00,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GETK	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GETK = 0x0c,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GETKQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GETKQ = 0x0d,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_GETQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_GETQ = 0x09,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_INCREMENT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_INCREMENT = 0x05,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_INCREMENTQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_INCREMENTQ = 0x15,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_NOOP	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_NOOP = 0x0a,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_PREPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_PREPEND = 0x0f,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_PREPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_PREPENDQ = 0x1a,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_QUIT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_QUIT = 0x07,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_QUITQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_QUITQ = 0x17,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RAPPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RAPPEND   = 0x33,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RAPPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RAPPENDQ  = 0x34,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RDECR	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDECR     = 0x3b,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RDECRQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDECRQ    = 0x3c$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RDELETE	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDELETE   = 0x37,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RDELETEQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RDELETEQ  = 0x38,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_REPLACE	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_REPLACE = 0x03,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_REPLACEQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_REPLACEQ = 0x13,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RGET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RGET      = 0x30,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RINCR	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RINCR     = 0x39,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RINCRQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RINCRQ    = 0x3a,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RPREPEND	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RPREPEND  = 0x35,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RPREPENDQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RPREPENDQ = 0x36,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RSET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RSET      = 0x31,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_RSETQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_RSETQ     = 0x32,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_SASL_AUTH	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SASL_AUTH = 0x21,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_SASL_LIST_MECHS	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SASL_LIST_MECHS = 0x20,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_SASL_STEP	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SASL_STEP = 0x22,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_SET	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SET = 0x01,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_SETQ	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_SETQ = 0x11,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_STAT	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_STAT = 0x10,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_TOUCH	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_TOUCH = 0x1c,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_CMD_VERSION	protocol_binary.h	/^        PROTOCOL_BINARY_CMD_VERSION = 0x0b,$/;"	e	enum:__anon8
+PROTOCOL_BINARY_H	protocol_binary.h	36;"	d
+PROTOCOL_BINARY_RAW_BYTES	protocol_binary.h	/^        PROTOCOL_BINARY_RAW_BYTES = 0x00$/;"	e	enum:__anon9
+PROTOCOL_BINARY_REQ	protocol_binary.h	/^        PROTOCOL_BINARY_REQ = 0x80,$/;"	e	enum:__anon6
+PROTOCOL_BINARY_RES	protocol_binary.h	/^        PROTOCOL_BINARY_RES = 0x81$/;"	e	enum:__anon6
+PROTOCOL_BINARY_RESPONSE_AUTH_CONTINUE	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_AUTH_CONTINUE = 0x21,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_AUTH_ERROR	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_AUTH_ERROR = 0x20,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_DELTA_BADVAL	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_DELTA_BADVAL = 0x06,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_E2BIG	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_E2BIG = 0x03,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_EINVAL	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_EINVAL = 0x04,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_ENOMEM	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_ENOMEM = 0x82$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_KEY_EEXISTS	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_KEY_EEXISTS = 0x02,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_KEY_ENOENT	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_KEY_ENOENT = 0x01,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_NOT_STORED	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_NOT_STORED = 0x05,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_SUCCESS	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_SUCCESS = 0x00,$/;"	e	enum:__anon7
+PROTOCOL_BINARY_RESPONSE_UNKNOWN_COMMAND	protocol_binary.h	/^        PROTOCOL_BINARY_RESPONSE_UNKNOWN_COMMAND = 0x81,$/;"	e	enum:__anon7
+READ_BUFFER_HIGHWAT	memcached.h	56;"	d
 READ_DATA_RECEIVED	memcached.c	/^    READ_DATA_RECEIVED,$/;"	e	enum:try_read_result	file:
 READ_ERROR	memcached.c	/^    READ_ERROR,            \/** an error occurred (on the socket) (or client closed connection) *\/$/;"	e	enum:try_read_result	file:
 READ_MEMORY_ERROR	memcached.c	/^    READ_MEMORY_ERROR      \/** failed to allocate more memory *\/$/;"	e	enum:try_read_result	file:
 READ_NO_DATA_RECEIVED	memcached.c	/^    READ_NO_DATA_RECEIVED,$/;"	e	enum:try_read_result	file:
-REALTIME_MAXDELTA	memcached.c	/^#define REALTIME_MAXDELTA /;"	d	file:
+REALTIME_MAXDELTA	memcached.c	155;"	d	file:
 REASSIGN_BADCLASS	slabs.h	/^    REASSIGN_OK=0, REASSIGN_RUNNING, REASSIGN_BADCLASS, REASSIGN_NOSPARE,$/;"	e	enum:reassign_result_type
 REASSIGN_NOSPARE	slabs.h	/^    REASSIGN_OK=0, REASSIGN_RUNNING, REASSIGN_BADCLASS, REASSIGN_NOSPARE,$/;"	e	enum:reassign_result_type
 REASSIGN_OK	slabs.h	/^    REASSIGN_OK=0, REASSIGN_RUNNING, REASSIGN_BADCLASS, REASSIGN_NOSPARE,$/;"	e	enum:reassign_result_type
@@ -411,54 +415,62 @@ RES_MAGIC	t/binary.t	/^use constant RES_MAGIC        => 0x81;$/;"	c
 RES_PKT_FMT	t/binary-sasl.t	/^use constant RES_PKT_FMT      => "CCnCCnNNNN";$/;"	c
 RES_PKT_FMT	t/binary.t	/^use constant RES_PKT_FMT      => "CCnCCnNNNN";$/;"	c
 RES_PKT_FMT	t/udp.t	/^use constant RES_PKT_FMT      => "CCnCCnNNNN";$/;"	c
-ROTL32	murmur3_hash.c	/^#define    ROTL32(/;"	d	file:
-ROTL32	murmur3_hash.c	/^#define ROTL32(/;"	d	file:
-SASL_CONTINUE	sasl_defs.h	/^#define SASL_CONTINUE /;"	d
-SASL_DEFS_H	sasl_defs.h	/^#define SASL_DEFS_H /;"	d
-SASL_OK	sasl_defs.h	/^#define SASL_OK /;"	d
+ROTL32	murmur3_hash.c	23;"	d	file:
+ROTL32	murmur3_hash.c	38;"	d	file:
+SASL_CONTINUE	sasl_defs.h	27;"	d
+SASL_DEFS_H	sasl_defs.h	2;"	d
+SASL_OK	sasl_defs.h	26;"	d
 SKIP	t/stats-conns.t	/^SKIP: {$/;"	l
-SLABS_ALLOC_NO_NEWPAGE	slabs.h	/^#define SLABS_ALLOC_NO_NEWPAGE /;"	d
-SLABS_H	slabs.h	/^#define SLABS_H$/;"	d
-SLAB_GLOBAL_PAGE_POOL	memcached.h	/^#define SLAB_GLOBAL_PAGE_POOL /;"	d
-SLAB_STATS_FIELDS	memcached.h	/^#define SLAB_STATS_FIELDS /;"	d
+SLABS_ALLOC_NO_NEWPAGE	slabs.h	26;"	d
+SLABS_H	slabs.h	3;"	d
+SLAB_GLOBAL_PAGE_POOL	memcached.h	83;"	d
+SLAB_STATS_FIELDS	memcached.h	230;"	d
 STATS_LOCK	thread.c	/^void STATS_LOCK() {$/;"	f
 STATS_UNLOCK	thread.c	/^void STATS_UNLOCK() {$/;"	f
-STAT_KEY_LEN	memcached.h	/^#define STAT_KEY_LEN /;"	d
-STAT_VAL_LEN	memcached.h	/^#define STAT_VAL_LEN /;"	d
+STAT_KEY_LEN	memcached.h	118;"	d
+STAT_VAL_LEN	memcached.h	119;"	d
 STORED	memcached.h	/^    NOT_STORED=0, STORED, EXISTS, NOT_FOUND, TOO_LARGE, NO_MEMORY$/;"	e	enum:store_item_type
-SUBCOMMAND_TOKEN	memcached.c	/^#define SUBCOMMAND_TOKEN /;"	d	file:
-SUFFIX_LIST_INITIAL	memcached.h	/^#define SUFFIX_LIST_INITIAL /;"	d
-SUFFIX_SIZE	memcached.h	/^#define SUFFIX_SIZE /;"	d
-TAIL_REPAIR_TIME_DEFAULT	memcached.h	/^#define TAIL_REPAIR_TIME_DEFAULT /;"	d
+SUBCOMMAND_TOKEN	memcached.c	2692;"	d	file:
+SUFFIX_LIST_INITIAL	memcached.h	47;"	d
+SUFFIX_SIZE	memcached.h	41;"	d
+TAIL_REPAIR_TIME_DEFAULT	memcached.h	90;"	d
 TEST_FAIL	testapp.c	/^enum test_return { TEST_SKIP, TEST_PASS, TEST_FAIL };$/;"	e	enum:test_return	file:
 TEST_FUNC	testapp.c	/^typedef enum test_return (*TEST_FUNC)(void);$/;"	t	typeref:enum:TEST_FUNC	file:
 TEST_PASS	testapp.c	/^enum test_return { TEST_SKIP, TEST_PASS, TEST_FAIL };$/;"	e	enum:test_return	file:
 TEST_SKIP	testapp.c	/^enum test_return { TEST_SKIP, TEST_PASS, TEST_FAIL };$/;"	e	enum:test_return	file:
-THREAD_STATS_FIELDS	memcached.h	/^#define THREAD_STATS_FIELDS /;"	d
-TIMEOUT_MSG_SIZE	memcached.c	/^#define TIMEOUT_MSG_SIZE /;"	d	file:
-TMP_TEMPLATE	testapp.c	/^#define TMP_TEMPLATE /;"	d	file:
+THREAD_STATS_FIELDS	memcached.h	247;"	d
+TIMEOUT_MSG_SIZE	memcached.c	304;"	d	file:
+TMP_TEMPLATE	testapp.c	26;"	d	file:
 TOO_LARGE	memcached.h	/^    NOT_STORED=0, STORED, EXISTS, NOT_FOUND, TOO_LARGE, NO_MEMORY$/;"	e	enum:store_item_type
-TRACE_H	trace.h	/^#define TRACE_H$/;"	d
+TRACE_H	trace.h	2;"	d
 TRANSMIT_COMPLETE	memcached.c	/^    TRANSMIT_COMPLETE,   \/** All done writing. *\/$/;"	e	enum:transmit_result	file:
 TRANSMIT_HARD_ERROR	memcached.c	/^    TRANSMIT_HARD_ERROR  \/** Can't write (c->state is set to conn_closing) *\/$/;"	e	enum:transmit_result	file:
 TRANSMIT_INCOMPLETE	memcached.c	/^    TRANSMIT_INCOMPLETE, \/** More data remaining to write. *\/$/;"	e	enum:transmit_result	file:
 TRANSMIT_SOFT_ERROR	memcached.c	/^    TRANSMIT_SOFT_ERROR, \/** Can't write any more right now. *\/$/;"	e	enum:transmit_result	file:
-UDP_HEADER_SIZE	memcached.h	/^#define UDP_HEADER_SIZE /;"	d
-UDP_MAX_PAYLOAD_SIZE	memcached.h	/^#define UDP_MAX_PAYLOAD_SIZE /;"	d
-UDP_READ_BUFFER_SIZE	memcached.h	/^#define UDP_READ_BUFFER_SIZE /;"	d
-WARM_LRU	items.h	/^#define WARM_LRU /;"	d
-WATCHER_ALL	logger.c	/^#define WATCHER_ALL /;"	d	file:
-WATCHER_LIMIT	logger.c	/^#define WATCHER_LIMIT /;"	d	file:
-X	memcached.h	/^#define X(/;"	d
-X	memcached.h	/^#undef X$/;"	d
-X	thread.c	/^#define X(/;"	d	file:
-X	thread.c	/^#undef X$/;"	d	file:
-_P1003_1B_VISIBLE	memcached.c	/^#define _P1003_1B_VISIBLE$/;"	d	file:
-__builtin_expect	memcached.h	/^#define __builtin_expect(/;"	d
+UDP_HEADER_SIZE	memcached.h	37;"	d
+UDP_MAX_PAYLOAD_SIZE	memcached.h	36;"	d
+UDP_READ_BUFFER_SIZE	memcached.h	35;"	d
+WARM_LRU	items.h	2;"	d
+WATCHER_ALL	logger.c	50;"	d	file:
+WATCHER_LIMIT	logger.c	37;"	d	file:
+X	memcached.h	242;"	d
+X	memcached.h	244;"	d
+X	memcached.h	271;"	d
+X	memcached.h	273;"	d
+X	thread.c	670;"	d	file:
+X	thread.c	672;"	d	file:
+X	thread.c	690;"	d	file:
+X	thread.c	692;"	d	file:
+X	thread.c	695;"	d	file:
+X	thread.c	698;"	d	file:
+X	thread.c	711;"	d	file:
+X	thread.c	713;"	d	file:
+_P1003_1B_VISIBLE	memcached.c	30;"	d	file:
+__builtin_expect	memcached.h	673;"	d
 __check_for_switch_to_b	bipbuffer.c	/^static void __check_for_switch_to_b(bipbuf_t* me)$/;"	f	file:
-__gcc_attribute__	util.h	/^# define __gcc_attribute__ /;"	d
-__gcc_attribute__	util.h	/^# define __gcc_attribute__(/;"	d
-__need_IOV_MAX	memcached.c	/^#define __need_IOV_MAX$/;"	d	file:
+__gcc_attribute__	util.h	25;"	d
+__gcc_attribute__	util.h	27;"	d
+__need_IOV_MAX	memcached.c	34;"	d	file:
 _append_prepend	t/binary-sasl.t	/^sub _append_prepend {$/;"	s
 _append_prepend	t/binary.t	/^sub _append_prepend {$/;"	s
 _crawler_module_t	crawler.c	/^struct _crawler_module_t {$/;"	s	file:
@@ -486,8 +498,8 @@ _store_item_copy_chunks	memcached.c	/^static void _store_item_copy_chunks(item *
 _store_item_copy_data	memcached.c	/^static void _store_item_copy_data(int comm, item *old_it, item *new_it, item *add_it) {$/;"	f	file:
 _strchunk	memcached.h	/^typedef struct _strchunk {$/;"	s
 _stritem	memcached.h	/^typedef struct _stritem {$/;"	s
-a_end	bipbuffer.h	/^    unsigned int a_start, a_end;$/;"	m	struct:__anon1
-a_start	bipbuffer.h	/^    unsigned int a_start, a_end;$/;"	m	struct:__anon1
+a_end	bipbuffer.h	/^    unsigned int a_start, a_end;$/;"	m	struct:__anon46
+a_start	bipbuffer.h	/^    unsigned int a_start, a_end;$/;"	m	struct:__anon46
 accept_new_conns	thread.c	/^void accept_new_conns(const bool do_accept) {$/;"	f
 accepting_conns	memcached.h	/^    bool          accepting_conns;  \/* whether we are currently accepting *\/$/;"	m	struct:stats_state
 access	memcached.h	/^    int access;  \/* access mask (a la chmod) for unix domain socket *\/$/;"	m	struct:settings
@@ -520,10 +532,10 @@ authenticate	t/binary-sasl.t	/^sub authenticate {$/;"	s
 authenticated	memcached.c	/^static bool authenticated(conn *c) {$/;"	f	file:
 authenticated	memcached.h	/^    bool authenticated;$/;"	m	struct:conn
 automove_basic	scripts/mc_slab_mover	/^sub automove_basic {$/;"	s
-b_end	bipbuffer.h	/^    unsigned int b_end;$/;"	m	struct:__anon1
-b_inuse	bipbuffer.h	/^    int b_inuse;$/;"	m	struct:__anon1
+b_end	bipbuffer.h	/^    unsigned int b_end;$/;"	m	struct:__anon46
+b_inuse	bipbuffer.h	/^    int b_inuse;$/;"	m	struct:__anon46
 backlog	memcached.h	/^    int backlog;$/;"	m	struct:settings
-base	memcached.h	/^    struct event_base *base;    \/* libevent handle this thread uses *\/$/;"	m	struct:__anon12	typeref:struct:__anon12::event_base
+base	memcached.h	/^    struct event_base *base;    \/* libevent handle this thread uses *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::event_base
 bin_list_sasl_mechs	memcached.c	/^static void bin_list_sasl_mechs(conn *c) {$/;"	f	file:
 bin_no_state	memcached.h	/^    bin_no_state,$/;"	e	enum:bin_substates
 bin_read_flush_exptime	memcached.h	/^    bin_read_flush_exptime,$/;"	e	enum:bin_substates
@@ -557,56 +569,56 @@ bipbuf_push	bipbuffer.c	/^int bipbuf_push(bipbuf_t* me, const int size)$/;"	f
 bipbuf_request	bipbuffer.c	/^unsigned char *bipbuf_request(bipbuf_t* me, const int size)$/;"	f
 bipbuf_size	bipbuffer.c	/^int bipbuf_size(const bipbuf_t* me)$/;"	f
 bipbuf_sizeof	bipbuffer.c	/^static size_t bipbuf_sizeof(const unsigned int size)$/;"	f	file:
-bipbuf_t	bipbuffer.h	/^} bipbuf_t;$/;"	t	typeref:struct:__anon1
+bipbuf_t	bipbuffer.h	/^} bipbuf_t;$/;"	t	typeref:struct:__anon46
 bipbuf_unused	bipbuffer.c	/^int bipbuf_unused(const bipbuf_t* me)$/;"	f
 bipbuf_used	bipbuffer.c	/^int bipbuf_used(const bipbuf_t* me)$/;"	f
 blocked	logger.h	/^    uint64_t blocked; \/* times blocked instead of dropped *\/$/;"	m	struct:_logger
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon26::__anon27	typeref:struct:__anon26::__anon27::__anon28
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon29::__anon30	typeref:struct:__anon29::__anon30::__anon31
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon32::__anon33	typeref:struct:__anon32::__anon33::__anon34
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon35::__anon36	typeref:struct:__anon35::__anon36::__anon37
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon38::__anon39	typeref:struct:__anon38::__anon39::__anon40
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon41::__anon42	typeref:struct:__anon41::__anon42::__anon43
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon44::__anon45	typeref:struct:__anon44::__anon45::__anon46
-body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon47::__anon48	typeref:struct:__anon47::__anon48::__anon49
-bodylen	protocol_binary.h	/^            uint32_t bodylen;$/;"	m	struct:__anon18::__anon19
-bodylen	protocol_binary.h	/^            uint32_t bodylen;$/;"	m	struct:__anon20::__anon21
-buf	crawler.c	/^    bipbuf_t *buf; \/* output buffer *\/$/;"	m	struct:__anon3	file:
-buf	logger.h	/^    bipbuf_t *buf; \/* per-watcher output buffer *\/$/;"	m	struct:__anon9
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon18::__anon19	typeref:struct:__anon18::__anon19::__anon20
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon21::__anon22	typeref:struct:__anon21::__anon22::__anon23
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon24::__anon25	typeref:struct:__anon24::__anon25::__anon26
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon27::__anon28	typeref:struct:__anon27::__anon28::__anon29
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon30::__anon31	typeref:struct:__anon30::__anon31::__anon32
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon33::__anon34	typeref:struct:__anon33::__anon34::__anon35
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon36::__anon37	typeref:struct:__anon36::__anon37::__anon38
+body	protocol_binary.h	/^            } body;$/;"	m	struct:__anon39::__anon40	typeref:struct:__anon39::__anon40::__anon41
+bodylen	protocol_binary.h	/^            uint32_t bodylen;$/;"	m	struct:__anon10::__anon11
+bodylen	protocol_binary.h	/^            uint32_t bodylen;$/;"	m	struct:__anon12::__anon13
+buf	crawler.c	/^    bipbuf_t *buf; \/* output buffer *\/$/;"	m	struct:__anon49	file:
+buf	logger.h	/^    bipbuf_t *buf; \/* per-watcher output buffer *\/$/;"	m	struct:__anon44
 buf	logger.h	/^    bipbuf_t *buf;$/;"	m	struct:_logger
-buffer	memcached.h	/^        char *buffer;$/;"	m	struct:conn::__anon13
-bufsize	cache.h	/^    size_t bufsize;$/;"	m	struct:__anon2
+buffer	memcached.h	/^        char *buffer;$/;"	m	struct:conn::__anon5
+bufsize	cache.h	/^    size_t bufsize;$/;"	m	struct:__anon48
 build_command	t/binary-sasl.t	/^sub build_command {$/;"	s
 build_command	t/binary.t	/^sub build_command {$/;"	s
 build_udp_headers	memcached.c	/^static int build_udp_headers(conn *c) {$/;"	f	file:
 busy_items	memcached.h	/^    uint32_t busy_items;$/;"	m	struct:slab_rebalance
-bytes	protocol_binary.h	/^        uint8_t bytes[24];$/;"	m	union:__anon18
-bytes	protocol_binary.h	/^        uint8_t bytes[24];$/;"	m	union:__anon20
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 20];$/;"	m	union:__anon35
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon29
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon41
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon44
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon47
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 8];$/;"	m	union:__anon32
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header)];$/;"	m	union:__anon22
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_response_header) + 4];$/;"	m	union:__anon26
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_response_header) + 8];$/;"	m	union:__anon38
-bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_response_header)];$/;"	m	union:__anon24
+bytes	protocol_binary.h	/^        uint8_t bytes[24];$/;"	m	union:__anon10
+bytes	protocol_binary.h	/^        uint8_t bytes[24];$/;"	m	union:__anon12
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 20];$/;"	m	union:__anon27
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon21
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon33
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon36
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 4];$/;"	m	union:__anon39
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header) + 8];$/;"	m	union:__anon24
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_request_header)];$/;"	m	union:__anon14
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_response_header) + 4];$/;"	m	union:__anon18
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_response_header) + 8];$/;"	m	union:__anon30
+bytes	protocol_binary.h	/^        uint8_t bytes[sizeof(protocol_binary_response_header)];$/;"	m	union:__anon16
 c	crawler.c	/^    crawler_client_t c;$/;"	m	struct:_crawler_module_t	file:
-c	crawler.c	/^    void *c; \/* original connection structure. still with source thread attached. *\/$/;"	m	struct:__anon3	file:
-c	logger.h	/^    void *c; \/* original connection structure. still with source thread attached *\/$/;"	m	struct:__anon9
+c	crawler.c	/^    void *c; \/* original connection structure. still with source thread attached. *\/$/;"	m	struct:__anon49	file:
+c	logger.h	/^    void *c; \/* original connection structure. still with source thread attached *\/$/;"	m	struct:__anon44
 c	thread.c	/^    conn *c;$/;"	m	struct:conn_queue_item	file:
 cache_alloc	cache.c	/^void* cache_alloc(cache_t *cache) {$/;"	f
-cache_alloc	cache.h	/^#define cache_alloc(/;"	d
+cache_alloc	cache.h	9;"	d
 cache_bulkalloc	testapp.c	/^static enum test_return cache_bulkalloc(size_t datasize)$/;"	f	file:
 cache_constructor	testapp.c	/^static int cache_constructor(void *buffer, void *notused1, int notused2) {$/;"	f	file:
 cache_constructor_t	cache.h	/^typedef int cache_constructor_t(void* obj, void* notused1, int notused2);$/;"	t
 cache_constructor_test	testapp.c	/^static enum test_return cache_constructor_test(void)$/;"	f	file:
 cache_create	cache.c	/^cache_t* cache_create(const char *name, size_t bufsize, size_t align,$/;"	f
-cache_create	cache.h	/^#define cache_create(/;"	d
+cache_create	cache.h	11;"	d
 cache_create_test	testapp.c	/^static enum test_return cache_create_test(void)$/;"	f	file:
 cache_destroy	cache.c	/^void cache_destroy(cache_t *cache) {$/;"	f
-cache_destroy	cache.h	/^#define cache_destroy(/;"	d
+cache_destroy	cache.h	12;"	d
 cache_destructor	testapp.c	/^static void cache_destructor(void *buffer, void *notused) {$/;"	f	file:
 cache_destructor_t	cache.h	/^typedef void cache_destructor_t(void* obj, void* notused);$/;"	t
 cache_destructor_test	testapp.c	/^static enum test_return cache_destructor_test(void)$/;"	f	file:
@@ -614,26 +626,26 @@ cache_error	cache.c	/^int cache_error = 0;$/;"	v
 cache_fail_constructor	testapp.c	/^static int cache_fail_constructor(void *buffer, void *notused1, int notused2) {$/;"	f	file:
 cache_fail_constructor_test	testapp.c	/^static enum test_return cache_fail_constructor_test(void)$/;"	f	file:
 cache_free	cache.c	/^void cache_free(cache_t *cache, void *ptr) {$/;"	f
-cache_free	cache.h	/^#define cache_free(/;"	d
+cache_free	cache.h	10;"	d
 cache_redzone_test	testapp.c	/^static enum test_return cache_redzone_test(void)$/;"	f	file:
 cache_reuse_test	testapp.c	/^static enum test_return cache_reuse_test(void)$/;"	f	file:
-cache_t	cache.h	/^#define cache_t /;"	d
-cache_t	cache.h	/^} cache_t;$/;"	t	typeref:struct:__anon2
+cache_t	cache.h	/^} cache_t;$/;"	t	typeref:struct:__anon48
+cache_t	cache.h	8;"	d
 calc_results_evicted	scripts/mc_slab_mover	/^sub calc_results_evicted {$/;"	s
 calc_results_numratio	scripts/mc_slab_mover	/^sub calc_results_numratio {$/;"	s
 calc_slabs	scripts/mc_slab_mover	/^sub calc_slabs {$/;"	s
 call_stats	scripts/damemtop	/^sub call_stats {$/;"	s
-cas	memcached.h	/^        uint64_t cas;$/;"	m	union:_stritem::__anon10
+cas	memcached.h	/^        uint64_t cas;$/;"	m	union:_stritem::__anon2
 cas	memcached.h	/^    uint64_t cas; \/* the cas to return *\/$/;"	m	struct:conn
-cas	protocol_binary.h	/^            uint64_t cas;$/;"	m	struct:__anon18::__anon19
-cas	protocol_binary.h	/^            uint64_t cas;$/;"	m	struct:__anon20::__anon21
+cas	protocol_binary.h	/^            uint64_t cas;$/;"	m	struct:__anon10::__anon11
+cas	protocol_binary.h	/^            uint64_t cas;$/;"	m	struct:__anon12::__anon13
 cas_id_lock	items.c	/^static pthread_mutex_t cas_id_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
 caught	timedrun.c	/^static int caught = 0;$/;"	v	file:
 caught_signal	timedrun.c	/^static void caught_signal(int which)$/;"	f	file:
-cbuf	crawler.c	/^    char *cbuf; \/* current buffer *\/$/;"	m	struct:__anon3	file:
+cbuf	crawler.c	/^    char *cbuf; \/* current buffer *\/$/;"	m	struct:__anon49	file:
 check_cas_stats	t/stats.t	/^sub check_cas_stats {$/;"	s
 check_incr_stats	t/stats.t	/^sub check_incr_stats {$/;"	s
-checked	memcached.h	/^    uint64_t        checked;    \/* items examined during this crawl. *\/$/;"	m	struct:__anon11
+checked	memcached.h	/^    uint64_t        checked;    \/* items examined during this crawl. *\/$/;"	m	struct:__anon3
 chunk_rescues	memcached.h	/^    uint32_t chunk_rescues;$/;"	m	struct:slab_rebalance
 chunk_size	memcached.h	/^    int chunk_size;$/;"	m	struct:settings
 clear_screen	scripts/damemtop	/^sub clear_screen {$/;"	s
@@ -688,7 +700,7 @@ connect_memcached	scripts/damemtop	/^sub connect_memcached {$/;"	s
 connect_server	testapp.c	/^static int connect_server(const char *hostname, in_port_t port, bool nonblock)$/;"	f	file:
 conns	memcached.c	/^conn **conns;$/;"	v
 construct_udp_message	t/udp.t	/^sub construct_udp_message {$/;"	s
-constructor	cache.h	/^    cache_constructor_t* constructor;$/;"	m	struct:__anon2
+constructor	cache.h	/^    cache_constructor_t* constructor;$/;"	m	struct:__anon48
 constructor_pattern	testapp.c	/^const uint64_t constructor_pattern = 0xdeadcafebabebeef;$/;"	v
 contact	scripts/damemtop	/^contact: dormando\\@rydia.net or memcached\\@googlegroups.com.$/;"	l
 cq_init	thread.c	/^static void cq_init(CQ *cq) {$/;"	f	file:
@@ -699,8 +711,8 @@ cqi_freelist	thread.c	/^static CQ_ITEM *cqi_freelist;$/;"	v	file:
 cqi_freelist_lock	thread.c	/^static pthread_mutex_t cqi_freelist_lock;$/;"	v	file:
 cqi_new	thread.c	/^static CQ_ITEM *cqi_new(void) {$/;"	f	file:
 crawl_complete	crawler.h	/^    bool crawl_complete;$/;"	m	struct:crawler_expired_data
-crawler	memcached.h	/^} crawler;$/;"	t	typeref:struct:__anon11
-crawler_client_t	crawler.c	/^} crawler_client_t;$/;"	t	typeref:struct:__anon3	file:
+crawler	memcached.h	/^} crawler;$/;"	t	typeref:struct:__anon3
+crawler_client_t	crawler.c	/^} crawler_client_t;$/;"	t	typeref:struct:__anon49	file:
 crawler_count	crawler.c	/^static int crawler_count = 0;$/;"	v	file:
 crawler_deinit_func	crawler.c	/^typedef void (*crawler_deinit_func)(crawler_module_t *cm); \/\/ TODO: extra args?$/;"	t	file:
 crawler_doneclass_func	crawler.c	/^typedef void (*crawler_doneclass_func)(crawler_module_t *cm, int slab_cls);$/;"	t	file:
@@ -713,18 +725,18 @@ crawler_expired_init	crawler.c	/^static int crawler_expired_init(crawler_module_
 crawler_expired_mod	crawler.c	/^crawler_module_reg_t crawler_expired_mod = {$/;"	v
 crawler_finalize_func	crawler.c	/^typedef void (*crawler_finalize_func)(crawler_module_t *cm);$/;"	t	file:
 crawler_init_func	crawler.c	/^typedef int (*crawler_init_func)(crawler_module_t *cm, void *data); \/\/ TODO: init args?$/;"	t	file:
-crawler_items_checked	items.c	/^    uint64_t crawler_items_checked;$/;"	m	struct:__anon6	file:
+crawler_items_checked	items.c	/^    uint64_t crawler_items_checked;$/;"	m	struct:__anon47	file:
 crawler_metadump_eval	crawler.c	/^static void crawler_metadump_eval(crawler_module_t *cm, item *it, uint32_t hv, int i) {$/;"	f	file:
 crawler_metadump_mod	crawler.c	/^crawler_module_reg_t crawler_metadump_mod = {$/;"	v
 crawler_mod_regs	crawler.c	/^crawler_module_reg_t *crawler_mod_regs[2] = {$/;"	v
-crawler_module_reg_t	crawler.c	/^} crawler_module_reg_t;$/;"	t	typeref:struct:__anon4	file:
+crawler_module_reg_t	crawler.c	/^} crawler_module_reg_t;$/;"	t	typeref:struct:__anon50	file:
 crawler_module_t	crawler.c	/^typedef struct _crawler_module_t crawler_module_t;$/;"	t	typeref:struct:_crawler_module_t	file:
-crawler_reclaimed	items.c	/^    uint64_t crawler_reclaimed;$/;"	m	struct:__anon6	file:
+crawler_reclaimed	items.c	/^    uint64_t crawler_reclaimed;$/;"	m	struct:__anon47	file:
 crawler_result_type	crawler.h	/^enum crawler_result_type {$/;"	g
 crawler_run_type	memcached.h	/^enum crawler_run_type {$/;"	g
 crawlers	crawler.c	/^static crawler crawlers[LARGEST_ID];$/;"	v	file:
 crawlerstats	crawler.h	/^    crawlerstats_t crawlerstats[MAX_NUMBER_OF_SLAB_CLASSES];$/;"	m	struct:crawler_expired_data
-crawlerstats_t	crawler.h	/^} crawlerstats_t;$/;"	t	typeref:struct:__anon5
+crawlerstats_t	crawler.h	/^} crawlerstats_t;$/;"	t	typeref:struct:__anon45
 crawls_persleep	memcached.h	/^    int crawls_persleep; \/* Number of LRU crawls to run before sleeping *\/$/;"	m	struct:settings
 create_worker	thread.c	/^static void create_worker(void *(*func)(void *), void *arg) {$/;"	f	file:
 curr_bytes	memcached.h	/^    uint64_t      curr_bytes;$/;"	m	struct:stats_state
@@ -735,28 +747,28 @@ current_time	globals.c	/^volatile rel_time_t current_time;$/;"	v
 current_time	memcached.c	/^volatile rel_time_t current_time;$/;"	v
 d_clsid	memcached.h	/^    int d_clsid;$/;"	m	struct:slab_rebalance
 daemonize	daemon.c	/^int daemonize(int nochdir, int noclose)$/;"	f
-data	bipbuffer.h	/^    unsigned char data[];$/;"	m	struct:__anon1
+data	bipbuffer.h	/^    unsigned char data[];$/;"	m	struct:__anon46
 data	crawler.c	/^    void *data; \/* opaque data pointer *\/$/;"	m	struct:_crawler_module_t	file:
-data	logger.h	/^    } data[];$/;"	m	struct:_logentry	typeref:union:_logentry::__anon8
+data	logger.h	/^    } data[];$/;"	m	struct:_logentry	typeref:union:_logentry::__anon43
 data	memcached.h	/^    char data[];$/;"	m	struct:_strchunk
-data	memcached.h	/^    } data[];$/;"	m	struct:_stritem	typeref:union:_stritem::__anon10
-datatype	protocol_binary.h	/^            uint8_t datatype;$/;"	m	struct:__anon18::__anon19
-datatype	protocol_binary.h	/^            uint8_t datatype;$/;"	m	struct:__anon20::__anon21
+data	memcached.h	/^    } data[];$/;"	m	struct:_stritem	typeref:union:_stritem::__anon2
+datatype	protocol_binary.h	/^            uint8_t datatype;$/;"	m	struct:__anon10::__anon11
+datatype	protocol_binary.h	/^            uint8_t datatype;$/;"	m	struct:__anon12::__anon13
 decr	t/binary-sasl.t	/^sub decr {$/;"	s
 decr	t/binary.t	/^sub decr {$/;"	s
 default_entries	logger.c	/^static const entry_details default_entries[] = {$/;"	v	file:
 delete	t/binary-sasl.t	/^sub delete {$/;"	s
 delete	t/binary.t	/^sub delete {$/;"	s
-delta	protocol_binary.h	/^                uint64_t delta;$/;"	m	struct:__anon35::__anon36::__anon37
+delta	protocol_binary.h	/^                uint64_t delta;$/;"	m	struct:__anon27::__anon28::__anon29
 delta_badval	t/binary-sasl.t	/^sub delta_badval {$/;"	s
 delta_badval	t/binary.t	/^sub delta_badval {$/;"	s
 delta_result_type	memcached.h	/^enum delta_result_type {$/;"	g
 description	testapp.c	/^    const char *description;$/;"	m	struct:testcase	file:
 destruct_data	testapp.c	/^static void *destruct_data = 0;$/;"	v	file:
-destructor	cache.h	/^    cache_destructor_t* destructor;$/;"	m	struct:__anon2
+destructor	cache.h	/^    cache_destructor_t* destructor;$/;"	m	struct:__anon48
 detail_enabled	memcached.h	/^    int detail_enabled;     \/* nonzero if we're collecting detailed stats *\/$/;"	m	struct:settings
 die	autogen.sh	/^die() {$/;"	f
-direct_reclaims	items.c	/^    uint64_t direct_reclaims;$/;"	m	struct:__anon6	file:
+direct_reclaims	items.c	/^    uint64_t direct_reclaims;$/;"	m	struct:__anon47	file:
 dispatch_bin_command	memcached.c	/^static void dispatch_bin_command(conn *c) {$/;"	f	file:
 dispatch_conn_new	thread.c	/^void dispatch_conn_new(int sfd, enum conn_states init_state, int event_flags,$/;"	f
 display	sizes.c	/^static void display(const char *name, size_t size) {$/;"	f	file:
@@ -800,66 +812,66 @@ do_slabs_reassign	slabs.c	/^static enum reassign_result_type do_slabs_reassign(i
 do_slabs_stats	slabs.c	/^static void do_slabs_stats(ADD_STAT add_stats, void *c) {$/;"	f	file:
 do_store_item	memcached.c	/^enum store_item_type do_store_item(item *it, int comm, conn *c, const uint32_t hv) {$/;"	f
 done	memcached.h	/^    uint8_t done;$/;"	m	struct:slab_rebalance
-doneclass	crawler.c	/^    crawler_doneclass_func doneclass; \/* runs once per sub-crawler completion. *\/$/;"	m	struct:__anon4	file:
+doneclass	crawler.c	/^    crawler_doneclass_func doneclass; \/* runs once per sub-crawler completion. *\/$/;"	m	struct:__anon50	file:
 drive_machine	memcached.c	/^static void drive_machine(conn *c) {$/;"	f	file:
-drop_privileges	memcached.h	/^#define drop_privileges(/;"	d
+drop_privileges	memcached.h	668;"	d
 drop_privileges	solaris_priv.c	/^void drop_privileges(void) {$/;"	f
 dropped	logger.h	/^    uint64_t dropped; \/* entries dropped *\/$/;"	m	struct:_logger
 eflags	logger.h	/^    uint16_t eflags; \/* flags this logger should log *\/$/;"	m	struct:_logger
-eflags	logger.h	/^    uint16_t eflags; \/* flags we are interested in *\/$/;"	m	struct:__anon9
-eflags	logger.h	/^    uint16_t eflags;$/;"	m	struct:__anon7
+eflags	logger.h	/^    uint16_t eflags; \/* flags we are interested in *\/$/;"	m	struct:__anon44
+eflags	logger.h	/^    uint16_t eflags;$/;"	m	struct:__anon42
 eflags	logger.h	/^    uint16_t eflags;$/;"	m	struct:_logentry
 einval	t/binary.t	/^sub einval {$/;"	s
 enable_large_pages	memcached.c	/^static int enable_large_pages(void) {$/;"	f	file:
-end	logger.h	/^        char end;$/;"	m	union:_logentry::__anon8
-end	memcached.h	/^        char end;$/;"	m	union:_stritem::__anon10
-end_time	crawler.h	/^    rel_time_t end_time;$/;"	m	struct:__anon5
+end	logger.h	/^        char end;$/;"	m	union:_logentry::__anon43
+end	memcached.h	/^        char end;$/;"	m	union:_stritem::__anon2
+end_time	crawler.h	/^    rel_time_t end_time;$/;"	m	struct:__anon45
 end_time	crawler.h	/^    rel_time_t end_time;$/;"	m	struct:crawler_expired_data
 ensure_iov_space	memcached.c	/^static int ensure_iov_space(conn *c) {$/;"	f	file:
-entry	logger.h	/^        void *entry; \/* probably an item *\/$/;"	m	union:_logentry::__anon8
-entry_details	logger.h	/^} entry_details;$/;"	t	typeref:struct:__anon7
+entry	logger.h	/^        void *entry; \/* probably an item *\/$/;"	m	union:_logentry::__anon43
+entry_details	logger.h	/^} entry_details;$/;"	t	typeref:struct:__anon42
 entry_map	logger.h	/^    const entry_details *entry_map;$/;"	m	struct:_logger
 ev_flags	memcached.h	/^    short  ev_flags;$/;"	m	struct:conn
-eval	crawler.c	/^    crawler_eval_func eval; \/* runs on an item. *\/$/;"	m	struct:__anon4	file:
+eval	crawler.c	/^    crawler_eval_func eval; \/* runs on an item. *\/$/;"	m	struct:__anon50	file:
 event	logger.h	/^    enum log_entry_subtype event;$/;"	m	struct:_logentry	typeref:enum:_logentry::log_entry_subtype
 event	memcached.h	/^    struct event event;$/;"	m	struct:conn	typeref:struct:conn::event
 event_flags	thread.c	/^    int               event_flags;$/;"	m	struct:conn_queue_item	file:
 event_handler	memcached.c	/^void event_handler(const int fd, const short which, void *arg) {$/;"	f
 evict_to_free	memcached.h	/^    int evict_to_free;$/;"	m	struct:settings
-evicted	items.c	/^    uint64_t evicted;$/;"	m	struct:__anon6	file:
-evicted_nonzero	items.c	/^    uint64_t evicted_nonzero;$/;"	m	struct:__anon6	file:
-evicted_time	items.c	/^    rel_time_t evicted_time;$/;"	m	struct:__anon6	file:
-evicted_unfetched	items.c	/^    uint64_t evicted_unfetched; \/* items evicted but never touched *\/$/;"	m	struct:__anon6	file:
+evicted	items.c	/^    uint64_t evicted;$/;"	m	struct:__anon47	file:
+evicted_nonzero	items.c	/^    uint64_t evicted_nonzero;$/;"	m	struct:__anon47	file:
+evicted_time	items.c	/^    rel_time_t evicted_time;$/;"	m	struct:__anon47	file:
+evicted_unfetched	items.c	/^    uint64_t evicted_unfetched; \/* items evicted but never touched *\/$/;"	m	struct:__anon47	file:
 evictions_nomem	memcached.h	/^    uint32_t evictions_nomem;$/;"	m	struct:slab_rebalance
 exists	t/binary-sasl.t	/^sub exists {$/;"	s
 exists	t/binary.t	/^sub exists {$/;"	s
 expand_bucket	assoc.c	/^static unsigned int expand_bucket = 0;$/;"	v	file:
 expanding	assoc.c	/^static bool expanding = false;$/;"	v	file:
-expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon29::__anon30::__anon31
-expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon32::__anon33::__anon34
-expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon35::__anon36::__anon37
-expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon41::__anon42::__anon43
-expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon44::__anon45::__anon46
-expired_unfetched	items.c	/^    uint64_t expired_unfetched; \/* items reclaimed but never touched *\/$/;"	m	struct:__anon6	file:
+expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon21::__anon22::__anon23
+expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon24::__anon25::__anon26
+expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon27::__anon28::__anon29
+expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon33::__anon34::__anon35
+expiration	protocol_binary.h	/^                uint32_t expiration;$/;"	m	struct:__anon36::__anon37::__anon38
+expired_unfetched	items.c	/^    uint64_t expired_unfetched; \/* items reclaimed but never touched *\/$/;"	m	struct:__anon47	file:
 expirezero_does_not_evict	memcached.h	/^    bool expirezero_does_not_evict; \/* exptime == 0 goes into NOEXP_LRU *\/$/;"	m	struct:settings
 exptime	logger.h	/^    long long int exptime;$/;"	m	struct:logentry_eviction
-exptime	memcached.h	/^    rel_time_t      exptime;    \/* expire time *\/$/;"	m	struct:__anon11
+exptime	memcached.h	/^    rel_time_t      exptime;    \/* expire time *\/$/;"	m	struct:__anon3
 exptime	memcached.h	/^    rel_time_t      exptime;    \/* expire time *\/$/;"	m	struct:_stritem
 ext_command	testapp.c	/^static off_t ext_command(char* buf,$/;"	f	file:
-extlen	protocol_binary.h	/^            uint8_t extlen;$/;"	m	struct:__anon18::__anon19
-extlen	protocol_binary.h	/^            uint8_t extlen;$/;"	m	struct:__anon20::__anon21
+extlen	protocol_binary.h	/^            uint8_t extlen;$/;"	m	struct:__anon10::__anon11
+extlen	protocol_binary.h	/^            uint8_t extlen;$/;"	m	struct:__anon12::__anon13
 factor	memcached.h	/^    double factor;          \/* chunk size growth factor *\/$/;"	m	struct:settings
 fail	stats.c	/^static void fail(char *what) { printf("\\tFAIL: %s\\n", what); fflush(stdout); fail_count++; }$/;"	f	file:
 fail_count	stats.c	/^static int fail_count = 0;$/;"	v	file:
-failed_flush	logger.h	/^    bool failed_flush; \/* recently failed to write out (EAGAIN), wait before retry *\/$/;"	m	struct:__anon9
+failed_flush	logger.h	/^    bool failed_flush; \/* recently failed to write out (EAGAIN), wait before retry *\/$/;"	m	struct:__anon44
 fetcher_ratio	logger.h	/^    uint16_t fetcher_ratio; \/* log one out of every N fetches *\/$/;"	m	struct:_logger
-final	jenkins_hash.c	/^#define final(/;"	d	file:
-finalize	crawler.c	/^    crawler_finalize_func finalize; \/* runs once when all sub-crawlers are done. *\/$/;"	m	struct:__anon4	file:
+final	jenkins_hash.c	114;"	d	file:
+finalize	crawler.c	/^    crawler_finalize_func finalize; \/* runs once when all sub-crawlers are done. *\/$/;"	m	struct:__anon50	file:
 find_optimal_spacing	scripts/damemtop	/^sub find_optimal_spacing {$/;"	s
 fire_main_loop	scripts/damemtop	/^sub fire_main_loop {$/;"	s
-flags	protocol_binary.h	/^                uint32_t flags;$/;"	m	struct:__anon26::__anon27::__anon28
-flags	protocol_binary.h	/^                uint32_t flags;$/;"	m	struct:__anon32::__anon33::__anon34
-flags	protocol_binary.h	/^                uint8_t  flags;$/;"	m	struct:__anon47::__anon48::__anon49
+flags	protocol_binary.h	/^                uint32_t flags;$/;"	m	struct:__anon18::__anon19::__anon20
+flags	protocol_binary.h	/^                uint32_t flags;$/;"	m	struct:__anon24::__anon25::__anon26
+flags	protocol_binary.h	/^                uint8_t  flags;$/;"	m	struct:__anon39::__anon40::__anon41
 flush	t/binary-sasl.t	/^sub flush {$/;"	s
 flush	t/binary.t	/^sub flush {$/;"	s
 flush_command	testapp.c	/^static off_t flush_command(char* buf, size_t bufsz, uint8_t cmd, uint32_t exptime, bool use_extra) {$/;"	f	file:
@@ -867,13 +879,13 @@ flush_enabled	memcached.h	/^    bool flush_enabled;     \/* flush_all enabled *\
 flush_socket	t/binary-sasl.t	/^sub flush_socket {$/;"	s
 flush_socket	t/binary.t	/^sub flush_socket {$/;"	s
 fmix32	murmur3_hash.c	/^static FORCE_INLINE uint32_t fmix32 ( uint32_t h )$/;"	f	file:
-format	logger.h	/^    char *format;$/;"	m	struct:__anon7
+format	logger.h	/^    char *format;$/;"	m	struct:__anon42
 format_column	scripts/damemtop	/^sub format_column {$/;"	s
 format_commas	scripts/damemtop	/^sub format_commas {$/;"	s
 format_percent	scripts/damemtop	/^sub format_percent {$/;"	s
 free_port	t/lib/MemcachedTest.pm	/^sub free_port {$/;"	s
-freecurr	cache.h	/^    int freecurr;$/;"	m	struct:__anon2
-freetotal	cache.h	/^    int freetotal;$/;"	m	struct:__anon2
+freecurr	cache.h	/^    int freecurr;$/;"	m	struct:__anon48
+freetotal	cache.h	/^    int freetotal;$/;"	m	struct:__anon48
 function	testapp.c	/^    TEST_FUNC function;$/;"	m	struct:testcase	file:
 gat	t/binary.t	/^sub gat {$/;"	s
 get	t/binary-sasl.t	/^sub get {$/;"	s
@@ -889,7 +901,7 @@ gid	logger.h	/^    uint64_t gid;$/;"	m	struct:_logentry
 grab_stats	scripts/mc_slab_mover	/^sub grab_stats {$/;"	s
 grow_slab_list	slabs.c	/^static int grow_slab_list (const unsigned int id) {$/;"	f	file:
 grow_stats_buf	memcached.c	/^static bool grow_stats_buf(conn *c, size_t needed) {$/;"	f	file:
-h_next	memcached.h	/^    struct _stritem *h_next;    \/* hash chain next *\/$/;"	m	struct:__anon11	typeref:struct:__anon11::_stritem
+h_next	memcached.h	/^    struct _stritem *h_next;    \/* hash chain next *\/$/;"	m	struct:__anon3	typeref:struct:__anon3::_stritem
 h_next	memcached.h	/^    struct _stritem *h_next;    \/* hash chain next *\/$/;"	m	struct:_stritem	typeref:struct:_stritem::_stritem
 handle_binary_protocol_error	memcached.c	/^static void handle_binary_protocol_error(conn *c) {$/;"	f	file:
 handle_logfile	scripts/start-memcached	/^sub handle_logfile$/;"	s
@@ -904,52 +916,52 @@ hash_items	assoc.c	/^static unsigned int hash_items = 0;$/;"	v	file:
 hash_items_counter_lock	assoc.c	/^static pthread_mutex_t hash_items_counter_lock = PTHREAD_MUTEX_INITIALIZER;$/;"	v	file:
 hash_power_level	memcached.h	/^    unsigned int  hash_power_level; \/* Better hope it's not over 9000 *\/$/;"	m	struct:stats_state
 hashfunc_type	hash.h	/^enum hashfunc_type {$/;"	g
-hashmask	assoc.c	/^#define hashmask(/;"	d	file:
-hashmask	thread.c	/^#define hashmask(/;"	d	file:
+hashmask	assoc.c	39;"	d	file:
+hashmask	thread.c	64;"	d	file:
 hashpower	assoc.c	/^unsigned int hashpower = HASHPOWER_DEFAULT;$/;"	v
 hashpower_init	memcached.h	/^    int hashpower_init;     \/* Starting hash power level *\/$/;"	m	struct:settings
-hashsize	assoc.c	/^#define hashsize(/;"	d	file:
-hashsize	thread.c	/^#define hashsize(/;"	d	file:
+hashsize	assoc.c	38;"	d	file:
+hashsize	thread.c	63;"	d	file:
 hdrbuf	memcached.h	/^    unsigned char *hdrbuf; \/* udp packet headers *\/$/;"	m	struct:conn
 hdrsize	memcached.h	/^    int    hdrsize;   \/* number of headers' worth of space is allocated *\/$/;"	m	struct:conn
 head	memcached.h	/^    struct _stritem  *head;     \/* always points to the owner chunk *\/$/;"	m	struct:_strchunk	typeref:struct:_strchunk::_stritem
 head	thread.c	/^    CQ_ITEM *head;$/;"	m	struct:conn_queue	file:
-header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon22::__anon23
-header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon29::__anon30
-header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon32::__anon33
-header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon35::__anon36
-header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon41::__anon42
-header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon44::__anon45
-header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon24::__anon25
-header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon26::__anon27
-header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon38::__anon39
-header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon47::__anon48
+header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon14::__anon15
+header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon21::__anon22
+header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon24::__anon25
+header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon27::__anon28
+header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon33::__anon34
+header	protocol_binary.h	/^            protocol_binary_request_header header;$/;"	m	struct:__anon36::__anon37
+header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon16::__anon17
+header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon18::__anon19
+header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon30::__anon31
+header	protocol_binary.h	/^            protocol_binary_response_header header;$/;"	m	struct:__anon39::__anon40
 heads	items.c	/^static item *heads[LARGEST_ID];$/;"	v	file:
 hexify	t/udp.t	/^sub hexify {$/;"	s
 hickup_thread_running	testapp.c	/^volatile bool hickup_thread_running;$/;"	v
-histo	crawler.h	/^    uint64_t histo[61];$/;"	m	struct:__anon5
+histo	crawler.h	/^    uint64_t histo[61];$/;"	m	struct:__anon45
 host	t/lib/MemcachedTest.pm	/^sub host { $_[0]{host} }$/;"	s
 hot_lru_pct	memcached.h	/^    int hot_lru_pct; \/* percentage of slab space for HOT_LRU *\/$/;"	m	struct:settings
 htonll	util.c	/^uint64_t htonll(uint64_t val) {$/;"	f
 icurr	memcached.h	/^    item   **icurr;$/;"	m	struct:conn
-id	logger.h	/^    int id; \/* id number for watcher list *\/$/;"	m	struct:__anon9
+id	logger.h	/^    int id; \/* id number for watcher list *\/$/;"	m	struct:__anon44
 idle_timeout	memcached.h	/^    int idle_timeout;       \/* Number of seconds to let connections idle *\/$/;"	m	struct:settings
 ileft	memcached.h	/^    int    ileft;$/;"	m	struct:conn
 ilist	memcached.h	/^    item   **ilist;   \/* list of items to write out *\/$/;"	m	struct:conn
 incr	t/binary-sasl.t	/^sub incr {$/;"	s
 incr	t/binary.t	/^sub incr {$/;"	s
 incr_cas	t/binary.t	/^sub incr_cas {$/;"	s
-init	crawler.c	/^    crawler_init_func init; \/* run before crawl starts *\/$/;"	m	struct:__anon4	file:
+init	crawler.c	/^    crawler_init_func init; \/* run before crawl starts *\/$/;"	m	struct:__anon50	file:
 init_cond	thread.c	/^static pthread_cond_t init_cond;$/;"	v	file:
 init_count	thread.c	/^static int init_count = 0;$/;"	v	file:
 init_lock	thread.c	/^static pthread_mutex_t init_lock;$/;"	v	file:
 init_lru_crawler	crawler.c	/^int init_lru_crawler(void) {$/;"	f
 init_lru_maintainer	items.c	/^int init_lru_maintainer(void) {$/;"	f
 init_sasl	sasl_defs.c	/^void init_sasl(void) {$/;"	f
-init_sasl	sasl_defs.h	/^#define init_sasl(/;"	d
+init_sasl	sasl_defs.h	18;"	d
 init_sasl_conn	memcached.c	/^static void init_sasl_conn(conn *c) {$/;"	f	file:
 init_state	thread.c	/^    enum conn_states  init_state;$/;"	m	struct:conn_queue_item	typeref:enum:conn_queue_item::conn_states	file:
-initial	protocol_binary.h	/^                uint64_t initial;$/;"	m	struct:__anon35::__anon36::__anon37
+initial	protocol_binary.h	/^                uint64_t initial;$/;"	m	struct:__anon27::__anon28::__anon29
 initial_pool_size	cache.c	/^const int initial_pool_size = 64;$/;"	v
 inline_reclaim	memcached.h	/^    uint32_t inline_reclaim;$/;"	m	struct:slab_rebalance
 inter	memcached.h	/^    char *inter;$/;"	m	struct:settings
@@ -961,7 +973,7 @@ is_numeric	scripts/damemtop	/^sub is_numeric {$/;"	s
 isize	memcached.h	/^    int    isize;$/;"	m	struct:conn
 it_flags	logger.h	/^    uint16_t it_flags;$/;"	m	struct:logentry_eviction
 it_flags	memcached.h	/^    uint8_t          it_flags;  \/* ITEM_* above. *\/$/;"	m	struct:_strchunk
-it_flags	memcached.h	/^    uint8_t         it_flags;   \/* ITEM_* above *\/$/;"	m	struct:__anon11
+it_flags	memcached.h	/^    uint8_t         it_flags;   \/* ITEM_* above *\/$/;"	m	struct:__anon3
 it_flags	memcached.h	/^    uint8_t         it_flags;   \/* ITEM_* above *\/$/;"	m	struct:_stritem
 item	memcached.h	/^    void   *item;     \/* for commands set\/add\/replace  *\/$/;"	m	struct:conn
 item	memcached.h	/^} item;$/;"	t	typeref:struct:_stritem
@@ -1002,7 +1014,7 @@ item_unlink_q	items.c	/^static void item_unlink_q(item *it) {$/;"	f	file:
 item_unlock	thread.c	/^void item_unlock(uint32_t hv) {$/;"	f
 item_update	thread.c	/^void item_update(item *item) {$/;"	f
 itemstats	items.c	/^static itemstats_t itemstats[LARGEST_ID];$/;"	v	file:
-itemstats_t	items.c	/^} itemstats_t;$/;"	t	typeref:struct:__anon6	file:
+itemstats_t	items.c	/^} itemstats_t;$/;"	t	typeref:struct:__anon47	file:
 jenkins_hash	jenkins_hash.c	/^uint32_t jenkins_hash( const void *key, size_t length)$/;"	f
 jenkins_hash	jenkins_hash.c	/^uint32_t jenkins_hash($/;"	f
 key	logger.h	/^    char key[];$/;"	m	struct:logentry_eviction
@@ -1010,16 +1022,16 @@ key	logger.h	/^    char key[];$/;"	m	struct:logentry_item_get
 key	logger.h	/^    char key[];$/;"	m	struct:logentry_item_store
 key	t/stress-memcached.pl	/^sub key {$/;"	s
 keylen	memcached.h	/^    int keylen;$/;"	m	struct:conn
-keylen	protocol_binary.h	/^            uint16_t keylen;$/;"	m	struct:__anon18::__anon19
-keylen	protocol_binary.h	/^            uint16_t keylen;$/;"	m	struct:__anon20::__anon21
-l	memcached.h	/^    logger *l;                  \/* logger buffer *\/$/;"	m	struct:__anon12
+keylen	protocol_binary.h	/^            uint16_t keylen;$/;"	m	struct:__anon10::__anon11
+keylen	protocol_binary.h	/^            uint16_t keylen;$/;"	m	struct:__anon12::__anon13
+l	memcached.h	/^    logger *l;                  \/* logger buffer *\/$/;"	m	struct:__anon4
 last_cmd_time	memcached.h	/^    rel_time_t last_cmd_time;$/;"	m	struct:conn
 last_thread	thread.c	/^static int last_thread = -1;$/;"	v	file:
 latime	logger.h	/^    uint32_t latime;$/;"	m	struct:logentry_eviction
 length	memcached.c	/^    size_t length;$/;"	m	struct:token_s	file:
-likely	memcached.h	/^#define likely(/;"	d
+likely	memcached.h	676;"	d
 list_mechs	t/binary-sasl.t	/^sub list_mechs {$/;"	s
-list_size	slabs.c	/^    unsigned int list_size; \/* size of prev array *\/$/;"	m	struct:__anon50	file:
+list_size	slabs.c	/^    unsigned int list_size; \/* size of prev array *\/$/;"	m	struct:__anon1	file:
 listen_conn	memcached.c	/^static conn *listen_conn = NULL;$/;"	v	file:
 listen_disabled_num	memcached.h	/^    uint64_t      listen_disabled_num;$/;"	m	struct:stats
 load_config	scripts/damemtop	/^sub load_config {$/;"	s
@@ -1065,7 +1077,7 @@ logger_thread_read	logger.c	/^static int logger_thread_read(logger *l, struct lo
 logger_thread_sum_stats	logger.c	/^static void logger_thread_sum_stats(struct logger_stats *ls) {$/;"	f	file:
 logger_thread_write_entry	logger.c	/^static void logger_thread_write_entry(logentry *e, struct logger_stats *ls,$/;"	f	file:
 logger_tid	logger.c	/^static pthread_t logger_tid;$/;"	v	file:
-logger_watcher	logger.h	/^} logger_watcher;$/;"	t	typeref:struct:__anon9
+logger_watcher	logger.h	/^} logger_watcher;$/;"	t	typeref:struct:__anon44
 logger_watcher_buf_size	memcached.h	/^    unsigned int logger_watcher_buf_size; \/* size of logger's per-watcher buffer *\/$/;"	m	struct:settings
 logger_watcher_type	logger.h	/^enum logger_watcher_type {$/;"	g
 lookuphost	testapp.c	/^static struct addrinfo *lookuphost(const char *hostname, in_port_t port)$/;"	f	file:
@@ -1101,9 +1113,9 @@ lru_maintainer_thread	memcached.h	/^    bool lru_maintainer_thread; \/* LRU main
 lru_maintainer_tid	items.c	/^static pthread_t lru_maintainer_tid;$/;"	v	file:
 lru_pull_tail	items.c	/^static int lru_pull_tail(const int orig_id, const int cur_lru,$/;"	f	file:
 lru_type_map	items.c	/^static unsigned int lru_type_map[4] = {HOT_LRU, WARM_LRU, COLD_LRU, NOEXP_LRU};$/;"	v	file:
-lrutail_reflocked	items.c	/^    uint64_t lrutail_reflocked;$/;"	m	struct:__anon6	file:
-magic	protocol_binary.h	/^            uint8_t magic;$/;"	m	struct:__anon18::__anon19
-magic	protocol_binary.h	/^            uint8_t magic;$/;"	m	struct:__anon20::__anon21
+lrutail_reflocked	items.c	/^    uint64_t lrutail_reflocked;$/;"	m	struct:__anon47	file:
+magic	protocol_binary.h	/^            uint8_t magic;$/;"	m	struct:__anon10::__anon11
+magic	protocol_binary.h	/^            uint8_t magic;$/;"	m	struct:__anon12::__anon13
 main	memcached.c	/^int main (int argc, char **argv) {$/;"	f
 main	sizes.c	/^int main(int argc, char **argv) {$/;"	f
 main	stats.c	/^main(int argc, char **argv) {$/;"	f
@@ -1117,7 +1129,7 @@ maintenance_lock	assoc.c	/^static pthread_mutex_t maintenance_lock = PTHREAD_MUT
 maintenance_tid	assoc.c	/^static pthread_t maintenance_tid;$/;"	v	file:
 malloc_fails	memcached.h	/^    uint64_t      malloc_fails;$/;"	m	struct:stats
 max_fds	memcached.c	/^static int max_fds;$/;"	v	file:
-max_results	protocol_binary.h	/^                uint32_t max_results;$/;"	m	struct:__anon47::__anon48::__anon49
+max_results	protocol_binary.h	/^                uint32_t max_results;$/;"	m	struct:__anon39::__anon40::__anon41
 maxbytes	memcached.h	/^    size_t maxbytes;$/;"	m	struct:settings
 maxconns	memcached.h	/^    int maxconns;$/;"	m	struct:settings
 maxconns_entered	memcached.h	/^    struct timeval maxconns_entered;  \/* last time maxconns entered *\/$/;"	m	struct:stats	typeref:struct:stats::timeval
@@ -1140,22 +1152,22 @@ memcached_sasl_pwdb	sasl_defs.c	/^static const char *memcached_sasl_pwdb;$/;"	v	
 memcached_thread_init	thread.c	/^void memcached_thread_init(int nthreads) {$/;"	f
 memory_allocate	slabs.c	/^static void *memory_allocate(size_t size) {$/;"	f	file:
 memory_release	slabs.c	/^static void memory_release() {$/;"	f	file:
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon22	typeref:struct:__anon22::__anon23
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon14	typeref:struct:__anon14::__anon15
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon16	typeref:struct:__anon16::__anon17
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon18	typeref:struct:__anon18::__anon19
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon21	typeref:struct:__anon21::__anon22
 message	protocol_binary.h	/^        } message;$/;"	m	union:__anon24	typeref:struct:__anon24::__anon25
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon26	typeref:struct:__anon26::__anon27
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon29	typeref:struct:__anon29::__anon30
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon32	typeref:struct:__anon32::__anon33
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon35	typeref:struct:__anon35::__anon36
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon38	typeref:struct:__anon38::__anon39
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon41	typeref:struct:__anon41::__anon42
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon44	typeref:struct:__anon44::__anon45
-message	protocol_binary.h	/^        } message;$/;"	m	union:__anon47	typeref:struct:__anon47::__anon48
-mix	jenkins_hash.c	/^#define mix(/;"	d	file:
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon27	typeref:struct:__anon27::__anon28
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon30	typeref:struct:__anon30::__anon31
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon33	typeref:struct:__anon33::__anon34
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon36	typeref:struct:__anon36::__anon37
+message	protocol_binary.h	/^        } message;$/;"	m	union:__anon39	typeref:struct:__anon39::__anon40
+mix	jenkins_hash.c	79;"	d	file:
 mod	crawler.c	/^    crawler_module_reg_t *mod;$/;"	m	struct:_crawler_module_t	file:
 move_status	slabs.c	/^enum move_status {$/;"	g	file:
-moves_to_cold	items.c	/^    uint64_t moves_to_cold;$/;"	m	struct:__anon6	file:
-moves_to_warm	items.c	/^    uint64_t moves_to_warm;$/;"	m	struct:__anon6	file:
-moves_within_lru	items.c	/^    uint64_t moves_within_lru;$/;"	m	struct:__anon6	file:
+moves_to_cold	items.c	/^    uint64_t moves_to_cold;$/;"	m	struct:__anon47	file:
+moves_to_warm	items.c	/^    uint64_t moves_to_warm;$/;"	m	struct:__anon47	file:
+moves_within_lru	items.c	/^    uint64_t moves_within_lru;$/;"	m	struct:__anon47	file:
 msgbytes	memcached.h	/^    int    msgbytes;  \/* number of bytes in current msg *\/$/;"	m	struct:conn
 msgcurr	memcached.h	/^    int    msgcurr;   \/* element in msglist[] being transmitted now *\/$/;"	m	struct:conn
 msglist	memcached.h	/^    struct msghdr *msglist;$/;"	m	struct:conn	typeref:struct:conn::msghdr
@@ -1164,24 +1176,24 @@ msgused	memcached.h	/^    int    msgused;   \/* number of elements used in msgli
 mt_stats_lock	stats.c	/^void mt_stats_lock() { }$/;"	f
 mt_stats_unlock	stats.c	/^void mt_stats_unlock() { }$/;"	f
 mutation_ratio	logger.h	/^    uint16_t mutation_ratio; \/* log one out of every N mutations *\/$/;"	m	struct:_logger
-mutex	cache.h	/^    pthread_mutex_t mutex;$/;"	m	struct:__anon2
+mutex	cache.h	/^    pthread_mutex_t mutex;$/;"	m	struct:__anon48
 mutex	logger.h	/^    pthread_mutex_t mutex; \/* guard for this + *buf *\/$/;"	m	struct:_logger
 mutex	memcached.h	/^    pthread_mutex_t   mutex;$/;"	m	struct:thread_stats
-mutex_lock	memcached.h	/^#define mutex_lock(/;"	d
-mutex_unlock	memcached.h	/^#define mutex_unlock(/;"	d
+mutex_lock	memcached.h	604;"	d
+mutex_unlock	memcached.h	605;"	d
 my_sasl_hostname	sasl_defs.c	/^char my_sasl_hostname[1025];$/;"	v
-name	cache.h	/^    char *name;$/;"	m	struct:__anon2
+name	cache.h	/^    char *name;$/;"	m	struct:__anon48
 nbytes	memcached.h	/^    int              nbytes;    \/* used. *\/$/;"	m	struct:_strchunk
-nbytes	memcached.h	/^    int             nbytes;     \/* size of data *\/$/;"	m	struct:__anon11
+nbytes	memcached.h	/^    int             nbytes;     \/* size of data *\/$/;"	m	struct:__anon3
 nbytes	memcached.h	/^    int             nbytes;     \/* size of data *\/$/;"	m	struct:_stritem
-needs_client	crawler.c	/^    bool needs_client; \/* whether or not to grab onto the remote client *\/$/;"	m	struct:__anon4	file:
-needs_lock	crawler.c	/^    bool needs_lock; \/* whether or not we need the LRU lock held when eval is called *\/$/;"	m	struct:__anon4	file:
+needs_client	crawler.c	/^    bool needs_client; \/* whether or not to grab onto the remote client *\/$/;"	m	struct:__anon50	file:
+needs_lock	crawler.c	/^    bool needs_lock; \/* whether or not we need the LRU lock held when eval is called *\/$/;"	m	struct:__anon50	file:
 negotiating_prot	memcached.h	/^    negotiating_prot \/* Discovering the protocol *\/$/;"	e	enum:protocol
 network_transport	memcached.h	/^enum network_transport {$/;"	g
 new	t/binary-sasl.t	/^sub new {$/;"	s
 new	t/binary.t	/^sub new {$/;"	s
 new	t/lib/MemcachedTest.pm	/^sub new {$/;"	s
-new_conn_queue	memcached.h	/^    struct conn_queue *new_conn_queue; \/* queue of new connections to handle *\/$/;"	m	struct:__anon12	typeref:struct:__anon12::conn_queue
+new_conn_queue	memcached.h	/^    struct conn_queue *new_conn_queue; \/* queue of new connections to handle *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::conn_queue
 new_memcached	t/lib/MemcachedTest.pm	/^sub new_memcached {$/;"	s
 new_sock	t/lib/MemcachedTest.pm	/^sub new_sock {$/;"	s
 new_socket	memcached.c	/^static int new_socket(struct addrinfo *ai) {$/;"	f	file:
@@ -1190,27 +1202,27 @@ new_udp_sock	t/lib/MemcachedTest.pm	/^sub new_udp_sock {$/;"	s
 next	logger.h	/^    struct _logger *next;$/;"	m	struct:_logger	typeref:struct:_logger::_logger
 next	memcached.h	/^    conn   *next;     \/* Used for generating a list of conn structures *\/$/;"	m	struct:conn
 next	memcached.h	/^    struct _strchunk *next;     \/* points within its own chain. *\/$/;"	m	struct:_strchunk	typeref:struct:_strchunk::_strchunk
-next	memcached.h	/^    struct _stritem *next;$/;"	m	struct:__anon11	typeref:struct:__anon11::_stritem
+next	memcached.h	/^    struct _stritem *next;$/;"	m	struct:__anon3	typeref:struct:__anon3::_stritem
 next	memcached.h	/^    struct _stritem *next;$/;"	m	struct:_stritem	typeref:struct:_stritem::_stritem
 next	stats.c	/^    PREFIX_STATS *next;$/;"	m	struct:_prefix_stats	file:
 next	thread.c	/^    CQ_ITEM          *next;$/;"	m	struct:conn_queue_item	file:
 nkey	logger.h	/^    uint8_t nkey;$/;"	m	struct:logentry_eviction
 nkey	logger.h	/^    uint8_t nkey;$/;"	m	struct:logentry_item_get
 nkey	logger.h	/^    uint8_t nkey;$/;"	m	struct:logentry_item_store
-nkey	memcached.h	/^    uint8_t         nkey;       \/* key length, w\/terminating null and padding *\/$/;"	m	struct:__anon11
+nkey	memcached.h	/^    uint8_t         nkey;       \/* key length, w\/terminating null and padding *\/$/;"	m	struct:__anon3
 nkey	memcached.h	/^    uint8_t         nkey;       \/* key length, w\/terminating null and padding *\/$/;"	m	struct:_stritem
-noexp	crawler.h	/^    uint64_t noexp;$/;"	m	struct:__anon5
+noexp	crawler.h	/^    uint64_t noexp;$/;"	m	struct:__anon45
 noexp_lru_size	items.c	/^static unsigned int noexp_lru_size(int slabs_clsid) {$/;"	f	file:
 noop	t/binary-sasl.t	/^sub noop {$/;"	s
 noop	t/binary.t	/^sub noop {$/;"	s
 noreply	memcached.h	/^    bool   noreply;   \/* True if the reply should not be sent. *\/$/;"	m	struct:conn
 not_found	t/binary-sasl.t	/^sub not_found {$/;"	s
 not_found	t/binary.t	/^sub not_found {$/;"	s
-notify_event	memcached.h	/^    struct event notify_event;  \/* listen event for notify pipe *\/$/;"	m	struct:__anon12	typeref:struct:__anon12::event
-notify_receive_fd	memcached.h	/^    int notify_receive_fd;      \/* receiving end of notify pipe *\/$/;"	m	struct:__anon12
-notify_send_fd	memcached.h	/^    int notify_send_fd;         \/* sending end of notify pipe *\/$/;"	m	struct:__anon12
+notify_event	memcached.h	/^    struct event notify_event;  \/* listen event for notify pipe *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::event
+notify_receive_fd	memcached.h	/^    int notify_receive_fd;      \/* receiving end of notify pipe *\/$/;"	m	struct:__anon4
+notify_send_fd	memcached.h	/^    int notify_send_fd;         \/* sending end of notify pipe *\/$/;"	m	struct:__anon4
 nsuffix	memcached.h	/^    uint8_t          nsuffix;   \/* unused *\/$/;"	m	struct:_strchunk
-nsuffix	memcached.h	/^    uint8_t         nsuffix;    \/* length of flags-and-length string *\/$/;"	m	struct:__anon11
+nsuffix	memcached.h	/^    uint8_t         nsuffix;    \/* length of flags-and-length string *\/$/;"	m	struct:__anon3
 nsuffix	memcached.h	/^    uint8_t         nsuffix;    \/* length of flags-and-length string *\/$/;"	m	struct:_stritem
 ntohll	util.c	/^uint64_t ntohll(uint64_t val) {$/;"	f
 num_deletes	stats.c	/^    uint64_t      num_deletes;$/;"	m	struct:_prefix_stats	file:
@@ -1221,21 +1233,21 @@ num_sets	stats.c	/^    uint64_t      num_sets;$/;"	m	struct:_prefix_stats	file:
 num_threads	memcached.h	/^    int num_threads;        \/* number of worker (without dispatcher) libevent threads to run *\/$/;"	m	struct:settings
 num_threads_per_udp	memcached.h	/^    int num_threads_per_udp; \/* number of worker threads serving each udp socket *\/$/;"	m	struct:settings
 nz_strcmp	slabs.c	/^static int nz_strcmp(int nzlength, const char *nz, const char *z) {$/;"	f	file:
-offset	memcached.h	/^        size_t offset;$/;"	m	struct:conn::__anon13
+offset	memcached.h	/^        size_t offset;$/;"	m	struct:conn::__anon5
 old_hashtable	assoc.c	/^static item** old_hashtable = 0;$/;"	v	file:
 oldest_cas	memcached.h	/^    uint64_t oldest_cas; \/* ignore existing items with CAS values lower than this *\/$/;"	m	struct:settings
 oldest_live	memcached.h	/^    rel_time_t oldest_live; \/* ignore existing items older than this *\/$/;"	m	struct:settings
 opaque	memcached.h	/^    int opaque;$/;"	m	struct:conn
-opaque	protocol_binary.h	/^            uint32_t opaque;$/;"	m	struct:__anon18::__anon19
-opaque	protocol_binary.h	/^            uint32_t opaque;$/;"	m	struct:__anon20::__anon21
-opcode	protocol_binary.h	/^            uint8_t opcode;$/;"	m	struct:__anon18::__anon19
-opcode	protocol_binary.h	/^            uint8_t opcode;$/;"	m	struct:__anon20::__anon21
+opaque	protocol_binary.h	/^            uint32_t opaque;$/;"	m	struct:__anon10::__anon11
+opaque	protocol_binary.h	/^            uint32_t opaque;$/;"	m	struct:__anon12::__anon13
+opcode	protocol_binary.h	/^            uint8_t opcode;$/;"	m	struct:__anon10::__anon11
+opcode	protocol_binary.h	/^            uint8_t opcode;$/;"	m	struct:__anon12::__anon13
 out_of_memory	memcached.c	/^static void out_of_memory(conn *c, char *ascii_error) {$/;"	f	file:
 out_string	memcached.c	/^static void out_string(conn *c, const char *str) {$/;"	f	file:
-outofmemory	items.c	/^    uint64_t outofmemory;$/;"	m	struct:__anon6	file:
+outofmemory	items.c	/^    uint64_t outofmemory;$/;"	m	struct:__anon47	file:
 pause_thread_types	memcached.h	/^enum pause_thread_types {$/;"	g
 pause_threads	thread.c	/^void pause_threads(enum pause_thread_types type) {$/;"	f
-perslab	slabs.c	/^    unsigned int perslab;   \/* how many items per slab *\/$/;"	m	struct:__anon50	file:
+perslab	slabs.c	/^    unsigned int perslab;   \/* how many items per slab *\/$/;"	m	struct:__anon1	file:
 port	memcached.h	/^    int port;$/;"	m	struct:settings
 port	t/lib/MemcachedTest.pm	/^sub port { $_[0]{port} }$/;"	s
 port	testapp.c	/^static in_port_t port;$/;"	v	file:
@@ -1246,7 +1258,7 @@ prefix_len	stats.c	/^    size_t        prefix_len;$/;"	m	struct:_prefix_stats	fi
 prefix_stats	stats.c	/^static PREFIX_STATS *prefix_stats[PREFIX_HASH_SIZE];$/;"	v	file:
 prev	logger.h	/^    struct _logger *prev;$/;"	m	struct:_logger	typeref:struct:_logger::_logger
 prev	memcached.h	/^    struct _strchunk *prev;     \/* can potentially point to the head. *\/$/;"	m	struct:_strchunk	typeref:struct:_strchunk::_strchunk
-prev	memcached.h	/^    struct _stritem *prev;$/;"	m	struct:__anon11	typeref:struct:__anon11::_stritem
+prev	memcached.h	/^    struct _stritem *prev;$/;"	m	struct:__anon3	typeref:struct:__anon3::_stritem
 prev	memcached.h	/^    struct _stritem *prev;$/;"	m	struct:_stritem	typeref:struct:_stritem::_stritem
 primary_hashtable	assoc.c	/^static item** primary_hashtable = 0;$/;"	v	file:
 process_arithmetic_command	memcached.c	/^static void process_arithmetic_command(conn *c, token_t *tokens, const size_t ntokens, const bool incr) {$/;"	f	file:
@@ -1275,15 +1287,15 @@ process_watch_command	memcached.c	/^static void process_watch_command(conn *c, t
 prot_text	memcached.c	/^static const char *prot_text(enum protocol prot) {$/;"	f	file:
 protocol	memcached.h	/^    enum protocol protocol;   \/* which protocol this connection speaks *\/$/;"	m	struct:conn	typeref:enum:conn::protocol
 protocol	memcached.h	/^enum protocol {$/;"	g
-protocol_binary_command	protocol_binary.h	/^    } protocol_binary_command;$/;"	t	typeref:enum:__anon16
-protocol_binary_datatypes	protocol_binary.h	/^    } protocol_binary_datatypes;$/;"	t	typeref:enum:__anon17
-protocol_binary_magic	protocol_binary.h	/^    } protocol_binary_magic;$/;"	t	typeref:enum:__anon14
+protocol_binary_command	protocol_binary.h	/^    } protocol_binary_command;$/;"	t	typeref:enum:__anon8
+protocol_binary_datatypes	protocol_binary.h	/^    } protocol_binary_datatypes;$/;"	t	typeref:enum:__anon9
+protocol_binary_magic	protocol_binary.h	/^    } protocol_binary_magic;$/;"	t	typeref:enum:__anon6
 protocol_binary_request_add	protocol_binary.h	/^    typedef protocol_binary_request_set protocol_binary_request_add;$/;"	t
 protocol_binary_request_append	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_append;$/;"	t
 protocol_binary_request_decr	protocol_binary.h	/^    typedef protocol_binary_request_incr protocol_binary_request_decr;$/;"	t
 protocol_binary_request_delete	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_delete;$/;"	t
-protocol_binary_request_flush	protocol_binary.h	/^    } protocol_binary_request_flush;$/;"	t	typeref:union:__anon29
-protocol_binary_request_gat	protocol_binary.h	/^    } protocol_binary_request_gat;$/;"	t	typeref:union:__anon44
+protocol_binary_request_flush	protocol_binary.h	/^    } protocol_binary_request_flush;$/;"	t	typeref:union:__anon21
+protocol_binary_request_gat	protocol_binary.h	/^    } protocol_binary_request_gat;$/;"	t	typeref:union:__anon36
 protocol_binary_request_gatk	protocol_binary.h	/^    typedef protocol_binary_request_gat protocol_binary_request_gatk;$/;"	t
 protocol_binary_request_gatkq	protocol_binary.h	/^    typedef protocol_binary_request_gat protocol_binary_request_gatkq;$/;"	t
 protocol_binary_request_gatq	protocol_binary.h	/^    typedef protocol_binary_request_gat protocol_binary_request_gatq;$/;"	t
@@ -1291,13 +1303,13 @@ protocol_binary_request_get	protocol_binary.h	/^    typedef protocol_binary_requ
 protocol_binary_request_getk	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_getk;$/;"	t
 protocol_binary_request_getkq	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_getkq;$/;"	t
 protocol_binary_request_getq	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_getq;$/;"	t
-protocol_binary_request_header	protocol_binary.h	/^    } protocol_binary_request_header;$/;"	t	typeref:union:__anon18
-protocol_binary_request_incr	protocol_binary.h	/^    } protocol_binary_request_incr;$/;"	t	typeref:union:__anon35
-protocol_binary_request_no_extras	protocol_binary.h	/^    } protocol_binary_request_no_extras;$/;"	t	typeref:union:__anon22
+protocol_binary_request_header	protocol_binary.h	/^    } protocol_binary_request_header;$/;"	t	typeref:union:__anon10
+protocol_binary_request_incr	protocol_binary.h	/^    } protocol_binary_request_incr;$/;"	t	typeref:union:__anon27
+protocol_binary_request_no_extras	protocol_binary.h	/^    } protocol_binary_request_no_extras;$/;"	t	typeref:union:__anon14
 protocol_binary_request_noop	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_noop;$/;"	t
 protocol_binary_request_prepend	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_prepend;$/;"	t
 protocol_binary_request_quit	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_quit;$/;"	t
-protocol_binary_request_rangeop	protocol_binary.h	/^    } protocol_binary_request_rangeop;$/;"	t	typeref:union:__anon47
+protocol_binary_request_rangeop	protocol_binary.h	/^    } protocol_binary_request_rangeop;$/;"	t	typeref:union:__anon39
 protocol_binary_request_rappend	protocol_binary.h	/^    typedef protocol_binary_request_rangeop protocol_binary_request_rappend;$/;"	t
 protocol_binary_request_rappendq	protocol_binary.h	/^    typedef protocol_binary_request_rangeop protocol_binary_request_rappendq;$/;"	t
 protocol_binary_request_rdecr	protocol_binary.h	/^    typedef protocol_binary_request_rangeop protocol_binary_request_rdecr;$/;"	t
@@ -1312,9 +1324,9 @@ protocol_binary_request_rprepend	protocol_binary.h	/^    typedef protocol_binary
 protocol_binary_request_rprependq	protocol_binary.h	/^    typedef protocol_binary_request_rangeop protocol_binary_request_rprependq;$/;"	t
 protocol_binary_request_rset	protocol_binary.h	/^    typedef protocol_binary_request_rangeop protocol_binary_request_rset;$/;"	t
 protocol_binary_request_rsetq	protocol_binary.h	/^    typedef protocol_binary_request_rangeop protocol_binary_request_rsetq;$/;"	t
-protocol_binary_request_set	protocol_binary.h	/^    } protocol_binary_request_set;$/;"	t	typeref:union:__anon32
+protocol_binary_request_set	protocol_binary.h	/^    } protocol_binary_request_set;$/;"	t	typeref:union:__anon24
 protocol_binary_request_stats	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_stats;$/;"	t
-protocol_binary_request_touch	protocol_binary.h	/^    } protocol_binary_request_touch;$/;"	t	typeref:union:__anon41
+protocol_binary_request_touch	protocol_binary.h	/^    } protocol_binary_request_touch;$/;"	t	typeref:union:__anon33
 protocol_binary_request_version	protocol_binary.h	/^    typedef protocol_binary_request_no_extras protocol_binary_request_version;$/;"	t
 protocol_binary_response_add	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_add;$/;"	t
 protocol_binary_response_append	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_append;$/;"	t
@@ -1325,23 +1337,23 @@ protocol_binary_response_gat	protocol_binary.h	/^    typedef protocol_binary_res
 protocol_binary_response_gatk	protocol_binary.h	/^    typedef protocol_binary_response_get protocol_binary_response_gatk;$/;"	t
 protocol_binary_response_gatkq	protocol_binary.h	/^    typedef protocol_binary_response_get protocol_binary_response_gatkq;$/;"	t
 protocol_binary_response_gatq	protocol_binary.h	/^    typedef protocol_binary_response_get protocol_binary_response_gatq;$/;"	t
-protocol_binary_response_get	protocol_binary.h	/^    } protocol_binary_response_get;$/;"	t	typeref:union:__anon26
+protocol_binary_response_get	protocol_binary.h	/^    } protocol_binary_response_get;$/;"	t	typeref:union:__anon18
 protocol_binary_response_getk	protocol_binary.h	/^    typedef protocol_binary_response_get protocol_binary_response_getk;$/;"	t
 protocol_binary_response_getkq	protocol_binary.h	/^    typedef protocol_binary_response_get protocol_binary_response_getkq;$/;"	t
 protocol_binary_response_getq	protocol_binary.h	/^    typedef protocol_binary_response_get protocol_binary_response_getq;$/;"	t
-protocol_binary_response_header	protocol_binary.h	/^    } protocol_binary_response_header;$/;"	t	typeref:union:__anon20
-protocol_binary_response_incr	protocol_binary.h	/^    } protocol_binary_response_incr;$/;"	t	typeref:union:__anon38
-protocol_binary_response_no_extras	protocol_binary.h	/^    } protocol_binary_response_no_extras;$/;"	t	typeref:union:__anon24
+protocol_binary_response_header	protocol_binary.h	/^    } protocol_binary_response_header;$/;"	t	typeref:union:__anon12
+protocol_binary_response_incr	protocol_binary.h	/^    } protocol_binary_response_incr;$/;"	t	typeref:union:__anon30
+protocol_binary_response_no_extras	protocol_binary.h	/^    } protocol_binary_response_no_extras;$/;"	t	typeref:union:__anon16
 protocol_binary_response_noop	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_noop;$/;"	t
 protocol_binary_response_prepend	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_prepend;$/;"	t
 protocol_binary_response_quit	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_quit;$/;"	t
 protocol_binary_response_replace	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_replace;$/;"	t
 protocol_binary_response_set	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_set;$/;"	t
 protocol_binary_response_stats	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_stats;$/;"	t
-protocol_binary_response_status	protocol_binary.h	/^    } protocol_binary_response_status;$/;"	t	typeref:enum:__anon15
+protocol_binary_response_status	protocol_binary.h	/^    } protocol_binary_response_status;$/;"	t	typeref:enum:__anon7
 protocol_binary_response_touch	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_touch;$/;"	t
 protocol_binary_response_version	protocol_binary.h	/^    typedef protocol_binary_response_no_extras protocol_binary_response_version;$/;"	t
-ptr	cache.h	/^    void **ptr;$/;"	m	struct:__anon2
+ptr	cache.h	/^    void **ptr;$/;"	m	struct:__anon48
 raw_command	testapp.c	/^static off_t raw_command(char* buf,$/;"	f	file:
 rbuf	memcached.h	/^    char   *rbuf;   \/** buffer to read commands into *\/$/;"	m	struct:conn
 rbytes	memcached.h	/^    int    rbytes;  \/** how much data, starting from rcur, do we have unparsed *\/$/;"	m	struct:conn
@@ -1353,45 +1365,45 @@ read_into_chunked_item	memcached.c	/^static int read_into_chunked_item(conn *c) 
 realtime	memcached.c	/^static rel_time_t realtime(const time_t exptime) {$/;"	f	file:
 reassign_result_type	slabs.h	/^enum reassign_result_type {$/;"	g
 rebalance_tid	slabs.c	/^static pthread_t rebalance_tid;$/;"	v	file:
-reclaimed	crawler.h	/^    uint64_t reclaimed;$/;"	m	struct:__anon5
-reclaimed	items.c	/^    uint64_t reclaimed;$/;"	m	struct:__anon6	file:
-reclaimed	memcached.h	/^    uint64_t        reclaimed;  \/* items reclaimed during this crawl. *\/$/;"	m	struct:__anon11
+reclaimed	crawler.h	/^    uint64_t reclaimed;$/;"	m	struct:__anon45
+reclaimed	items.c	/^    uint64_t reclaimed;$/;"	m	struct:__anon47	file:
+reclaimed	memcached.h	/^    uint64_t        reclaimed;  \/* items reclaimed during this crawl. *\/$/;"	m	struct:__anon3
 redispatch_conn	thread.c	/^void redispatch_conn(conn *c) {$/;"	f
 redzone_pattern	cache.c	/^const uint64_t redzone_pattern = 0xdeadbeefcafebabe;$/;"	v
 refcount	memcached.h	/^    unsigned short   refcount;  \/* used? *\/$/;"	m	struct:_strchunk
-refcount	memcached.h	/^    unsigned short  refcount;$/;"	m	struct:__anon11
+refcount	memcached.h	/^    unsigned short  refcount;$/;"	m	struct:__anon3
 refcount	memcached.h	/^    unsigned short  refcount;$/;"	m	struct:_stritem
 refcount_decr	thread.c	/^unsigned short refcount_decr(unsigned short *refcount) {$/;"	f
 refcount_incr	thread.c	/^unsigned short refcount_incr(unsigned short *refcount) {$/;"	f
 register_thread_initialized	thread.c	/^static void register_thread_initialized(void) {$/;"	f	file:
 rejected_conns	memcached.h	/^    uint64_t      rejected_conns;$/;"	m	struct:stats
 rel_time_t	memcached.h	/^typedef unsigned int rel_time_t;$/;"	t
-remaining	memcached.h	/^    uint32_t        remaining;  \/* Max keys to crawl per slab per invocation *\/$/;"	m	struct:__anon11
+remaining	memcached.h	/^    uint32_t        remaining;  \/* Max keys to crawl per slab per invocation *\/$/;"	m	struct:__anon3
 remove_pidfile	memcached.c	/^static void remove_pidfile(const char *pid_file) {$/;"	f	file:
 reopen_logfile	scripts/start-memcached	/^sub reopen_logfile$/;"	s
 replace	t/binary-sasl.t	/^sub replace {$/;"	s
 replace	t/binary.t	/^sub replace {$/;"	s
-reqlen	logger.h	/^    int reqlen;$/;"	m	struct:__anon7
+reqlen	logger.h	/^    int reqlen;$/;"	m	struct:__anon42
 reqs_per_event	memcached.h	/^    int reqs_per_event;     \/* Maximum number of io to process on each$/;"	m	struct:settings
-request	protocol_binary.h	/^        } request;$/;"	m	union:__anon18	typeref:struct:__anon18::__anon19
+request	protocol_binary.h	/^        } request;$/;"	m	union:__anon10	typeref:struct:__anon10::__anon11
 request_addr	memcached.h	/^    struct sockaddr_in6 request_addr; \/* udp: Who sent the most recent request *\/$/;"	m	struct:conn	typeref:struct:conn::sockaddr_in6
 request_addr_size	memcached.h	/^    socklen_t request_addr_size;$/;"	m	struct:conn
 request_id	memcached.h	/^    int    request_id; \/* Incoming UDP request ID, if this is a UDP "connection" *\/$/;"	m	struct:conn
-requested	slabs.c	/^    size_t requested; \/* The number of requested bytes *\/$/;"	m	struct:__anon50	file:
+requested	slabs.c	/^    size_t requested; \/* The number of requested bytes *\/$/;"	m	struct:__anon1	file:
 rescues	memcached.h	/^    uint32_t rescues;$/;"	m	struct:slab_rebalance
-reserved	protocol_binary.h	/^                uint8_t  reserved;$/;"	m	struct:__anon47::__anon48::__anon49
-reserved	protocol_binary.h	/^            uint16_t reserved;$/;"	m	struct:__anon18::__anon19
+reserved	protocol_binary.h	/^                uint8_t  reserved;$/;"	m	struct:__anon39::__anon40::__anon41
+reserved	protocol_binary.h	/^            uint16_t reserved;$/;"	m	struct:__anon10::__anon11
 reserved_fds	memcached.h	/^    unsigned int  reserved_fds;$/;"	m	struct:stats_state
 reset_cmd_handler	memcached.c	/^static void reset_cmd_handler(conn *c) {$/;"	f	file:
-response	protocol_binary.h	/^        } response;$/;"	m	union:__anon20	typeref:struct:__anon20::__anon21
+response	protocol_binary.h	/^        } response;$/;"	m	union:__anon12	typeref:struct:__anon12::__anon13
 restart	scripts/memcached.sysv	/^restart () {$/;"	f
 ritem	memcached.h	/^    char   *ritem;  \/** when we read in an item's value, it goes here *\/$/;"	m	struct:conn
 rlbytes	memcached.h	/^    int    rlbytes;$/;"	m	struct:conn
-rot	jenkins_hash.c	/^#define rot(/;"	d	file:
+rot	jenkins_hash.c	33;"	d	file:
 rotl32	murmur3_hash.c	/^static inline uint32_t rotl32 ( uint32_t x, int8_t r )$/;"	f	file:
 rsize	memcached.h	/^    int    rsize;   \/** total allocated size of rbuf *\/$/;"	m	struct:conn
 run	scripts/mc_slab_mover	/^sub run {$/;"	s
-run_complete	crawler.h	/^    bool run_complete;$/;"	m	struct:__anon5
+run_complete	crawler.h	/^    bool run_complete;$/;"	m	struct:__anon45
 run_test	stats.c	/^static void run_test(char *what, void (*func)(void)) {$/;"	f	file:
 s_clsid	memcached.h	/^    int s_clsid;$/;"	m	struct:slab_rebalance
 safe_recv	testapp.c	/^static bool safe_recv(void *buf, size_t len) {$/;"	f	file:
@@ -1407,18 +1419,18 @@ sasl_callback_ft	sasl_defs.c	/^typedef int (*sasl_callback_ft)(void);$/;"	t	file
 sasl_callbacks	sasl_defs.c	/^static sasl_callback_t sasl_callbacks[] = {$/;"	v	file:
 sasl_conn	memcached.h	/^    sasl_conn_t *sasl_conn;$/;"	m	struct:conn
 sasl_conn_t	sasl_defs.h	/^typedef void* sasl_conn_t;$/;"	t
-sasl_dispose	sasl_defs.h	/^#define sasl_dispose(/;"	d
+sasl_dispose	sasl_defs.h	19;"	d
 sasl_getconf	sasl_defs.c	/^static int sasl_getconf(void *context, const char **path)$/;"	f	file:
-sasl_getprop	sasl_defs.h	/^#define sasl_getprop(/;"	d
-sasl_listmech	sasl_defs.h	/^#define sasl_listmech(/;"	d
+sasl_getprop	sasl_defs.h	24;"	d
+sasl_listmech	sasl_defs.h	21;"	d
 sasl_log	sasl_defs.c	/^static int sasl_log(void *context, int level, const char *message)$/;"	f	file:
-sasl_server_new	sasl_defs.h	/^#define sasl_server_new(/;"	d
-sasl_server_start	sasl_defs.h	/^#define sasl_server_start(/;"	d
-sasl_server_step	sasl_defs.h	/^#define sasl_server_step(/;"	d
+sasl_server_new	sasl_defs.h	20;"	d
+sasl_server_start	sasl_defs.h	22;"	d
+sasl_server_step	sasl_defs.h	23;"	d
 sasl_server_userdb_checkpass	sasl_defs.c	/^static int sasl_server_userdb_checkpass(sasl_conn_t *conn,$/;"	f	file:
 save_pid	memcached.c	/^static void save_pid(const char *pid_file) {$/;"	f	file:
 sbytes	memcached.h	/^    int    sbytes;    \/* how many bytes to swallow *\/$/;"	m	struct:conn
-seen	crawler.h	/^    uint64_t seen;$/;"	m	struct:__anon5
+seen	crawler.h	/^    uint64_t seen;$/;"	m	struct:__anon45
 send_ascii_command	testapp.c	/^static void send_ascii_command(const char *buf) {$/;"	f	file:
 send_command	t/binary-sasl.t	/^sub send_command {$/;"	s
 send_command	t/binary.t	/^sub send_command {$/;"	s
@@ -1439,8 +1451,8 @@ settings	memcached.h	/^struct settings {$/;"	s
 settings	stats.c	/^struct settings settings;$/;"	v	typeref:struct:settings
 settings_init	memcached.c	/^static void settings_init(void) {$/;"	f	file:
 setup_thread	thread.c	/^static void setup_thread(LIBEVENT_THREAD *me) {$/;"	f	file:
-sfd	crawler.c	/^    int sfd; \/* client fd. *\/$/;"	m	struct:__anon3	file:
-sfd	logger.h	/^    int sfd; \/* client fd *\/$/;"	m	struct:__anon9
+sfd	crawler.c	/^    int sfd; \/* client fd. *\/$/;"	m	struct:__anon49	file:
+sfd	logger.h	/^    int sfd; \/* client fd *\/$/;"	m	struct:__anon44
 sfd	memcached.h	/^    int    sfd;$/;"	m	struct:conn
 sfd	thread.c	/^    int               sfd;$/;"	m	struct:conn_queue_item	file:
 show_help	scripts/damemtop	/^sub show_help {$/;"	s
@@ -1453,21 +1465,21 @@ silent_incrdecr	t/binary-sasl.t	/^sub silent_incrdecr {$/;"	s
 silent_incrdecr	t/binary.t	/^sub silent_incrdecr {$/;"	s
 silent_mutation	t/binary-sasl.t	/^sub silent_mutation {$/;"	s
 silent_mutation	t/binary.t	/^sub silent_mutation {$/;"	s
-size	bipbuffer.h	/^    unsigned long int size;$/;"	m	struct:__anon1
+size	bipbuffer.h	/^    unsigned long int size;$/;"	m	struct:__anon46
 size	logger.h	/^    int size;$/;"	m	struct:_logentry
-size	memcached.h	/^        size_t size;$/;"	m	struct:conn::__anon13
+size	memcached.h	/^        size_t size;$/;"	m	struct:conn::__anon5
 size	memcached.h	/^    int              size;      \/* available chunk space in bytes *\/$/;"	m	struct:_strchunk
-size	protocol_binary.h	/^                uint16_t size;$/;"	m	struct:__anon47::__anon48::__anon49
-size	slabs.c	/^    unsigned int size;      \/* sizes of items *\/$/;"	m	struct:__anon50	file:
+size	protocol_binary.h	/^                uint16_t size;$/;"	m	struct:__anon39::__anon40::__anon41
+size	slabs.c	/^    unsigned int size;      \/* sizes of items *\/$/;"	m	struct:__anon1	file:
 sizes	items.c	/^static unsigned int sizes[LARGEST_ID];$/;"	v	file:
 sizes_bytes	items.c	/^static uint64_t sizes_bytes[LARGEST_ID];$/;"	v	file:
-skipped	logger.h	/^    uint64_t skipped; \/* lines skipped since last successful print *\/$/;"	m	struct:__anon9
-sl_curr	slabs.c	/^    unsigned int sl_curr;   \/* total free items in list *\/$/;"	m	struct:__anon50	file:
+skipped	logger.h	/^    uint64_t skipped; \/* lines skipped since last successful print *\/$/;"	m	struct:__anon44
+sl_curr	slabs.c	/^    unsigned int sl_curr;   \/* total free items in list *\/$/;"	m	struct:__anon1	file:
 slab_automove	memcached.h	/^    int slab_automove;     \/* Whether or not to automatically move slabs *\/$/;"	m	struct:settings
 slab_bulk_check	slabs.c	/^int slab_bulk_check = DEFAULT_SLAB_BULK_CHECK;$/;"	v
 slab_chunk_size_max	memcached.h	/^    int slab_chunk_size_max;  \/* Upper end for chunks within slab pages. *\/$/;"	m	struct:settings
 slab_end	memcached.h	/^    void *slab_end;$/;"	m	struct:slab_rebalance
-slab_list	slabs.c	/^    void **slab_list;       \/* array of slab pointers *\/$/;"	m	struct:__anon50	file:
+slab_list	slabs.c	/^    void **slab_list;       \/* array of slab pointers *\/$/;"	m	struct:__anon1	file:
 slab_page_size	memcached.h	/^    int slab_page_size;     \/* Slab's page units. *\/$/;"	m	struct:settings
 slab_pos	memcached.h	/^    void *slab_pos;$/;"	m	struct:slab_rebalance
 slab_reassign	memcached.h	/^    bool slab_reassign;     \/* Whether or not slab reassignment is allowed *\/$/;"	m	struct:settings
@@ -1494,14 +1506,14 @@ slab_stats	memcached.h	/^    struct slab_stats slab_stats[MAX_NUMBER_OF_SLAB_CLA
 slab_stats	memcached.h	/^struct slab_stats {$/;"	s
 slab_stats_aggregate	thread.c	/^void slab_stats_aggregate(struct thread_stats *stats, struct slab_stats *out) {$/;"	f
 slabclass	slabs.c	/^static slabclass_t slabclass[MAX_NUMBER_OF_SLAB_CLASSES];$/;"	v	file:
-slabclass_t	slabs.c	/^} slabclass_t;$/;"	t	typeref:struct:__anon50	file:
-slabs	slabs.c	/^    unsigned int slabs;     \/* how many slabs were allocated for this class *\/$/;"	m	struct:__anon50	file:
+slabclass_t	slabs.c	/^} slabclass_t;$/;"	t	typeref:struct:__anon1	file:
+slabs	slabs.c	/^    unsigned int slabs;     \/* how many slabs were allocated for this class *\/$/;"	m	struct:__anon1	file:
 slabs_adjust_mem_limit	slabs.c	/^bool slabs_adjust_mem_limit(size_t new_mem_limit) {$/;"	f
 slabs_adjust_mem_requested	slabs.c	/^void slabs_adjust_mem_requested(unsigned int id, size_t old, size_t ntotal)$/;"	f
 slabs_alloc	slabs.c	/^void *slabs_alloc(size_t size, unsigned int id, uint64_t *total_bytes,$/;"	f
 slabs_available_chunks	slabs.c	/^unsigned int slabs_available_chunks(const unsigned int id, bool *mem_flag,$/;"	f
 slabs_clsid	memcached.h	/^    uint8_t          slabs_clsid; \/* Same as above. *\/$/;"	m	struct:_strchunk
-slabs_clsid	memcached.h	/^    uint8_t         slabs_clsid;\/* which slab class we're in *\/$/;"	m	struct:__anon11
+slabs_clsid	memcached.h	/^    uint8_t         slabs_clsid;\/* which slab class we're in *\/$/;"	m	struct:__anon3
 slabs_clsid	memcached.h	/^    uint8_t         slabs_clsid;\/* which slab class we're in *\/$/;"	m	struct:_stritem
 slabs_clsid	slabs.c	/^unsigned int slabs_clsid(const size_t size) {$/;"	f
 slabs_free	slabs.c	/^void slabs_free(void *ptr, size_t size, unsigned int id) {$/;"	f
@@ -1516,7 +1528,7 @@ slabs_rebalancer_pause	slabs.c	/^void slabs_rebalancer_pause(void) {$/;"	f
 slabs_rebalancer_resume	slabs.c	/^void slabs_rebalancer_resume(void) {$/;"	f
 slabs_stats	slabs.c	/^void slabs_stats(ADD_STAT add_stats, void *c) {$/;"	f
 sleep	t/lib/MemcachedTest.pm	/^sub sleep {$/;"	s
-slots	slabs.c	/^    void *slots;           \/* list of item ptrs *\/$/;"	m	struct:__anon50	file:
+slots	slabs.c	/^    void *slots;           \/* list of item ptrs *\/$/;"	m	struct:__anon1	file:
 sock	t/lib/MemcachedTest.pm	/^sub sock {$/;"	s
 sock	testapp.c	/^static int sock;$/;"	v	file:
 socketpath	memcached.h	/^    char *socketpath;   \/* path to unix socket if using local socket *\/$/;"	m	struct:settings
@@ -1531,15 +1543,15 @@ start_lru_maintainer_thread	items.c	/^int start_lru_maintainer_thread(void) {$/;
 start_memcached_server	testapp.c	/^static enum test_return start_memcached_server(void) {$/;"	f	file:
 start_server	testapp.c	/^static pid_t start_server(in_port_t *port_out, bool daemon, int timeout) {$/;"	f	file:
 start_slab_maintenance_thread	slabs.c	/^int start_slab_maintenance_thread(void) {$/;"	f
-start_time	crawler.h	/^    rel_time_t start_time;$/;"	m	struct:__anon5
+start_time	crawler.h	/^    rel_time_t start_time;$/;"	m	struct:__anon45
 start_time	crawler.h	/^    rel_time_t start_time;$/;"	m	struct:crawler_expired_data
 started_expanding	assoc.c	/^static bool started_expanding = false;$/;"	v	file:
 state	memcached.h	/^    enum conn_states  state;$/;"	m	struct:conn	typeref:enum:conn::conn_states
 state_text	memcached.c	/^static const char *state_text(enum conn_states state) {$/;"	f	file:
 stats	globals.c	/^struct stats stats;$/;"	v	typeref:struct:stats
 stats	memcached.c	/^struct stats stats;$/;"	v	typeref:struct:stats
-stats	memcached.h	/^    struct thread_stats stats;  \/* Stats generated by this thread *\/$/;"	m	struct:__anon12	typeref:struct:__anon12::thread_stats
-stats	memcached.h	/^    } stats;$/;"	m	struct:conn	typeref:struct:conn::__anon13
+stats	memcached.h	/^    struct thread_stats stats;  \/* Stats generated by this thread *\/$/;"	m	struct:__anon4	typeref:struct:__anon4::thread_stats
+stats	memcached.h	/^    } stats;$/;"	m	struct:conn	typeref:struct:conn::__anon5
 stats	memcached.h	/^struct stats {$/;"	s
 stats	t/binary-sasl.t	/^sub stats {$/;"	s
 stats	t/binary.t	/^sub stats {$/;"	s
@@ -1561,7 +1573,7 @@ stats_state	globals.c	/^struct stats_state stats_state;$/;"	v	typeref:struct:sta
 stats_state	memcached.c	/^struct stats_state stats_state;$/;"	v	typeref:struct:stats_state
 stats_state	memcached.h	/^struct stats_state {$/;"	s
 status	logger.h	/^    int status;$/;"	m	struct:logentry_item_store
-status	protocol_binary.h	/^            uint16_t status;$/;"	m	struct:__anon20::__anon21
+status	protocol_binary.h	/^            uint16_t status;$/;"	m	struct:__anon12::__anon13
 stop	scripts/memcached.sysv	/^stop () {$/;"	f
 stop	t/lib/MemcachedTest.pm	/^sub stop {$/;"	s
 stop_assoc_maintenance_thread	assoc.c	/^void stop_assoc_maintenance_thread() {$/;"	f
@@ -1574,18 +1586,18 @@ store_item	thread.c	/^enum store_item_type store_item(item *item, int comm, conn
 store_item_type	memcached.h	/^enum store_item_type {$/;"	g
 stress	t/stress-memcached.pl	/^sub stress {$/;"	s
 substate	memcached.h	/^    enum bin_substates substate;$/;"	m	struct:conn	typeref:enum:conn::bin_substates
-subtype	logger.h	/^    enum log_entry_subtype subtype;$/;"	m	struct:__anon7	typeref:enum:__anon7::log_entry_subtype
-suffix_cache	memcached.h	/^    cache_t *suffix_cache;      \/* suffix cache *\/$/;"	m	struct:__anon12
+subtype	logger.h	/^    enum log_entry_subtype subtype;$/;"	m	struct:__anon42	typeref:enum:__anon42::log_entry_subtype
+suffix_cache	memcached.h	/^    cache_t *suffix_cache;      \/* suffix cache *\/$/;"	m	struct:__anon4
 suffixcurr	memcached.h	/^    char   **suffixcurr;$/;"	m	struct:conn
 suffixleft	memcached.h	/^    int    suffixleft;$/;"	m	struct:conn
 suffixlist	memcached.h	/^    char   **suffixlist;$/;"	m	struct:conn
 suffixsize	memcached.h	/^    int    suffixsize;$/;"	m	struct:conn
 supports_sasl	t/lib/MemcachedTest.pm	/^sub supports_sasl {$/;"	s
 supports_udp	t/lib/MemcachedTest.pm	/^sub supports_udp {$/;"	s
-t	logger.h	/^    enum logger_watcher_type t; \/* stderr, client, syslog, etc *\/$/;"	m	struct:__anon9	typeref:enum:__anon9::logger_watcher_type
+t	logger.h	/^    enum logger_watcher_type t; \/* stderr, client, syslog, etc *\/$/;"	m	struct:__anon44	typeref:enum:__anon44::logger_watcher_type
 tail	thread.c	/^    CQ_ITEM *tail;$/;"	m	struct:conn_queue	file:
 tail_repair_time	memcached.h	/^    int tail_repair_time;   \/* LRU tail refcount leak repair time *\/$/;"	m	struct:settings
-tailrepairs	items.c	/^    uint64_t tailrepairs;$/;"	m	struct:__anon6	file:
+tailrepairs	items.c	/^    uint64_t tailrepairs;$/;"	m	struct:__anon47	file:
 tails	items.c	/^static item *tails[LARGEST_ID];$/;"	v	file:
 tcp_transport	memcached.h	/^    tcp_transport,$/;"	e	enum:network_transport
 test_binary_add	testapp.c	/^static enum test_return test_binary_add(void) {$/;"	f	file:
@@ -1659,13 +1671,13 @@ test_vperror	testapp.c	/^static enum test_return test_vperror(void) {$/;"	f	file
 testcase	testapp.c	/^struct testcase {$/;"	s	file:
 testcases	testapp.c	/^struct testcase testcases[] = {$/;"	v	typeref:struct:testcase
 thread	memcached.h	/^    LIBEVENT_THREAD *thread; \/* Pointer to the thread object serving this connection *\/$/;"	m	struct:conn
-thread_id	memcached.h	/^    pthread_t thread_id;        \/* unique ID of this thread *\/$/;"	m	struct:__anon12
+thread_id	memcached.h	/^    pthread_t thread_id;        \/* unique ID of this thread *\/$/;"	m	struct:__anon4
 thread_libevent_process	thread.c	/^static void thread_libevent_process(int fd, short which, void *arg) {$/;"	f	file:
 thread_stats	memcached.h	/^struct thread_stats {$/;"	s
 threadlocal_stats_aggregate	thread.c	/^void threadlocal_stats_aggregate(struct thread_stats *stats) {$/;"	f
 threadlocal_stats_reset	thread.c	/^void threadlocal_stats_reset(void) {$/;"	f
 threads	thread.c	/^static LIBEVENT_THREAD *threads;$/;"	v	file:
-time	memcached.h	/^    rel_time_t      time;       \/* least recent access *\/$/;"	m	struct:__anon11
+time	memcached.h	/^    rel_time_t      time;       \/* least recent access *\/$/;"	m	struct:__anon3
 time	memcached.h	/^    rel_time_t      time;       \/* least recent access *\/$/;"	m	struct:_stritem
 time_in_listen_disabled_us	memcached.h	/^    uint64_t      time_in_listen_disabled_us;  \/* elapsed time in microseconds while server unable to process new connections *\/$/;"	m	struct:stats
 token_s	memcached.c	/^typedef struct token_s {$/;"	s	file:
@@ -1686,7 +1698,7 @@ try_read_command	memcached.c	/^static int try_read_command(conn *c) {$/;"	f	file
 try_read_network	memcached.c	/^static enum try_read_result try_read_network(conn *c) {$/;"	f	file:
 try_read_result	memcached.c	/^enum try_read_result {$/;"	g	file:
 try_read_udp	memcached.c	/^static enum try_read_result try_read_udp(conn *c) {$/;"	f	file:
-ttl_hourplus	crawler.h	/^    uint64_t ttl_hourplus;$/;"	m	struct:__anon5
+ttl_hourplus	crawler.h	/^    uint64_t ttl_hourplus;$/;"	m	struct:__anon45
 tv	logger.h	/^    struct timeval tv; \/* not monotonic! *\/$/;"	m	struct:_logentry	typeref:struct:_logentry::timeval
 ub1	assoc.c	/^typedef  unsigned       char ub1;   \/* unsigned 1-byte quantities *\/$/;"	t	file:
 ub4	assoc.c	/^typedef  unsigned long  int  ub4;   \/* unsigned 4-byte quantities *\/$/;"	t	file:
@@ -1697,8 +1709,8 @@ udp_set_test	t/udp.t	/^sub udp_set_test {$/;"	s
 udp_transport	memcached.h	/^    udp_transport$/;"	e	enum:network_transport
 udpport	memcached.h	/^    int udpport;$/;"	m	struct:settings
 udpport	t/lib/MemcachedTest.pm	/^sub udpport { $_[0]{udpport} }$/;"	s
-unfetched	memcached.h	/^    uint64_t        unfetched;  \/* items reclaiemd unfetched during this crawl. *\/$/;"	m	struct:__anon11
-unlikely	memcached.h	/^#define unlikely(/;"	d
+unfetched	memcached.h	/^    uint64_t        unfetched;  \/* items reclaiemd unfetched during this crawl. *\/$/;"	m	struct:__anon3
+unlikely	memcached.h	677;"	d
 update_event	memcached.c	/^static bool update_event(conn *c, const int new_flags) {$/;"	f	file:
 uriencode	util.c	/^bool uriencode(const char *src, char *dst, const size_t srclen, const size_t dstlen) {$/;"	f
 uriencode_init	util.c	/^void uriencode_init(void) {$/;"	f
@@ -1711,7 +1723,7 @@ use_cas	memcached.h	/^    bool use_cas;$/;"	m	struct:settings
 used	memcached.h	/^    int              used;      \/* chunk space used *\/$/;"	m	struct:_strchunk
 validate_response_header	testapp.c	/^static void validate_response_header(protocol_binary_response_no_extras *response,$/;"	f	file:
 value	memcached.c	/^    char *value;$/;"	m	struct:token_s	file:
-value	protocol_binary.h	/^                uint64_t value;$/;"	m	struct:__anon38::__anon39::__anon40
+value	protocol_binary.h	/^                uint64_t value;$/;"	m	struct:__anon30::__anon31::__anon32
 verbose	memcached.h	/^    int verbose;$/;"	m	struct:settings
 version	t/binary-sasl.t	/^sub version {$/;"	s
 version	t/binary.t	/^sub version {$/;"	s
@@ -1742,4 +1754,4 @@ write_bin_response	memcached.c	/^static void write_bin_response(conn *c, void *d
 write_file	version.pl	/^sub write_file {$/;"	s
 written	logger.h	/^    uint64_t written; \/* entries written to the buffer *\/$/;"	m	struct:_logger
 wsize	memcached.h	/^    int    wsize;$/;"	m	struct:conn
-xisspace	util.c	/^#define xisspace(/;"	d	file:
+xisspace	util.c	47;"	d	file:
