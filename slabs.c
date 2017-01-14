@@ -1198,7 +1198,42 @@ static int slabs_reassign_pick_any(int dst) {
     return -1;
 }
 
-static enum reassign_result_type gn(src, dst);
+static enum reassign_result_type do_slabs_reassign(int src, int dst) {
+    if (slab_rebalance_signal != 0)
+        return REASSIGN_RUNNING;
+
+    if (src == dst)
+        return REASSIGN_SRC_DST_SAME;
+
+    /* Special indicator to choose ourselves. */
+    if (src == -1) {
+        src = slabs_reassign_pick_any(dst);
+        /* TODO: If we end up back at -1, return a new error type */
+    }
+
+    if (src < POWER_SMALLEST        || src > power_largest ||
+        dst < SLAB_GLOBAL_PAGE_POOL || dst > power_largest)
+        return REASSIGN_BADCLASS;
+
+    if (slabclass[src].slabs < 2)
+        return REASSIGN_NOSPARE;
+
+    slab_rebal.s_clsid = src;
+    slab_rebal.d_clsid = dst;
+
+    slab_rebalance_signal = 1;
+    pthread_cond_signal(&slab_rebalance_cond);
+
+    return REASSIGN_OK;
+}
+
+enum reassign_result_type slabs_reassign(int src, int dst) {
+    enum reassign_result_type ret;
+    if (pthread_mutex_trylock(&slabs_rebalance_lock) != 0) {
+        return REASSIGN_RUNNING;
+    }
+    ret = do_slabs_reassign(src, dst);
+
     pthread_mutex_unlock(&slabs_rebalance_lock);
     return ret;
 }
