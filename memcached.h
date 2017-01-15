@@ -227,6 +227,8 @@ typedef unsigned int rel_time_t;
  * aggregation. No longer have to add new stats in 3+ places.
  */
 
+/* 牺牲了可读性，定义这么个X宏 */
+
 #define SLAB_STATS_FIELDS \
     X(set_cmds) \
     X(get_hits) \
@@ -371,9 +373,10 @@ struct settings {
     unsigned int logger_buf_size; /* size of per-thread logger buffer */
 };
 
+/* 在global.c中定义*/
 extern struct stats stats;
 extern struct stats_state stats_state;
-extern time_t process_started;
+extern time_t process_started; /* 定义在.c文件中 */
 extern struct settings settings;
 
 #define ITEM_LINKED 1
@@ -392,6 +395,12 @@ extern struct settings settings;
 
 /**
  * Structure for storing items within memcached.
+ */
+
+/* item之间发生关系的方式
+ * 1. 通过LRU产生关系，每个slab都有，__stritem中的nex和prev指针
+ *    它的使用需要获取LRU的锁
+ * 2. hash桶上的item冲突，使用链表解决冲突，h_next，这个需要这个桶上item的锁
  */
 typedef struct _stritem {
     /* Protected by LRU locks */
@@ -424,6 +433,10 @@ enum crawler_run_type {
     CRAWLER_EXPIRED=0, CRAWLER_METADUMP
 };
 
+/* 这个crawler是伪装成一个item，它有一个特殊的标记来识别它是crawler
+ * it_flags == 0，表示它自己不是一个真正的item，它只是在LRU队列中不断
+ * 地行走
+ */
 typedef struct {
     struct _stritem *next;
     struct _stritem *prev;
@@ -436,6 +449,7 @@ typedef struct {
     uint8_t         it_flags;   /* ITEM_* above */
     uint8_t         slabs_clsid;/* which slab class we're in */
     uint8_t         nkey;       /* key length, w/terminating null and padding */
+	/*======== 上面和__stritem是一致的=============*/
     uint32_t        remaining;  /* Max keys to crawl per slab per invocation */
     uint64_t        reclaimed;  /* items reclaimed during this crawl. */
     uint64_t        unfetched;  /* items reclaiemd unfetched during this crawl. */
@@ -472,6 +486,7 @@ typedef struct {
 /**
  * The structure representing a connection into memcached.
  */
+/* 一个暴大的结构体，而且各个变量的注释不是那么完备 */
 typedef struct conn conn;
 struct conn {
     int    sfd;
@@ -586,6 +601,7 @@ struct slab_rebalance {
     uint8_t done;
 };
 
+/* 定义于globals.c */
 extern struct slab_rebalance slab_rebal;
 
 /*
@@ -613,6 +629,7 @@ extern int daemonize(int nochdir, int noclose);
 #include "hash.h"
 #include "util.h"
 
+/* 大部分都定义在thread.c中 */
 /*
  * Functions such as the libevent-related calls that need to do cross-thread
  * communication in multithreaded mode (rather than actually doing the work

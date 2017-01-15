@@ -152,12 +152,20 @@ static void maxconns_handler(const int fd, const short which, void *arg) {
     }
 }
 
+/* 一个月？ */
 #define REALTIME_MAXDELTA 60*60*24*30
 
 /*
  * given time value that's either unix time or delta from current unix time, return
  * unix time. Use the fact that delta can't exceed one month (and real time value can't
  * be that low).
+ */
+/* rel_time_t 是个无符号的数，如果变成负数，其实是个大正数
+ * 这个函数修正exptime
+ * 1. 超过一个月
+ *    在程序启动前，赋值为1
+ *    在程序启动后，减去程序启动时间
+ * 2. 不超过
  */
 static rel_time_t realtime(const time_t exptime) {
     /* no. of seconds in 30 days - largest possible delta exptime */
@@ -188,6 +196,7 @@ static void stats_init(void) {
        did, so time(0) - time.started is never zero.  if so, things
        like 'settings.oldest_live' which act as booleans as well as
        values are now false in boolean context... */
+	/* ITEM_UPDATE_INTERVAL 是 60s */
     process_started = time(0) - ITEM_UPDATE_INTERVAL - 2;
     stats_prefix_init();
 }
@@ -302,6 +311,8 @@ static pthread_t conn_timeout_tid;
 
 #define CONNS_PER_SLICE 100
 #define TIMEOUT_MSG_SIZE (1 + sizeof(int))
+/* 这个函数永远不会返回 */
+/* 在这个时间段内，允许连接处于空闲状态 */
 static void *conn_timeout_thread(void *arg) {
     int i;
     conn *c;
@@ -316,6 +327,7 @@ static void *conn_timeout_thread(void *arg) {
 
         oldest_last_cmd = current_time;
 
+		/* timeout thread 自己先休息，然后才休息别人 */
         for (i = 0; i < max_fds; i++) {
             if ((i % CONNS_PER_SLICE) == 0) {
                 if (settings.verbose > 2)
@@ -413,6 +425,7 @@ static void conn_init(void) {
     }
 }
 
+/* proto enum to proto text。但是感觉以后想要扩展的时候比较麻烦 */
 static const char *prot_text(enum protocol prot) {
     char *rv = "unknown";
     switch(prot) {
@@ -442,6 +455,7 @@ void conn_close_idle(conn *c) {
         if (settings.verbose > 1)
             fprintf(stderr, "Closing idle fd %d\n", c->sfd);
 
+		/* 关闭连接的条件是：c->state是conn_new_cmd或者conn_read */
         c->thread->stats.idle_kicks++;
 
         conn_set_state(c, conn_closing);
@@ -449,6 +463,7 @@ void conn_close_idle(conn *c) {
     }
 }
 
+/* 一个额外的线程会把关闭的连接重新变成可用状态：c->state = conn_new_cmd */
 /* bring conn back from a sidethread. could have had its event base moved. */
 void conn_worker_readd(conn *c) {
     c->ev_flags = EV_READ | EV_PERSIST;
@@ -497,6 +512,7 @@ conn *conn_new(const int sfd, enum conn_states init_state,
 
         c->rbuf = (char *)malloc((size_t)c->rsize);
         c->wbuf = (char *)malloc((size_t)c->wsize);
+		/* list后缀的一般是二级指针，一个数组指针 */
         c->ilist = (item **)malloc(sizeof(item *) * c->isize);
         c->suffixlist = (char **)malloc(sizeof(char *) * c->suffixsize);
         c->iov = (struct iovec *)malloc(sizeof(struct iovec) * c->iovsize);
@@ -5701,11 +5717,13 @@ int main (int argc, char **argv) {
         NULL
     };
 
+	/* 只是简单的检查了libevent的版本号 */
     if (!sanitycheck()) {
         return EX_OSERR;
     }
 
     /* handle SIGINT and SIGTERM */
+	/* 打印相关信号的信息(strsignal)，然后退出程序 */
     signal(SIGINT, sig_handler);
     signal(SIGTERM, sig_handler);
 
@@ -5799,6 +5817,7 @@ int main (int argc, char **argv) {
             lock_memory = true;
             break;
         case 'v':
+			/* 竟然用v的个数来表示输出的水平 */
             settings.verbose++;
             break;
         case 'l':
